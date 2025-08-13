@@ -1,33 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Inverted 70 Degree Slice (Bottom)</title>
-  <style>
-    body {
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar Panel Landing Design</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .sliced-rectangle {
-      width: 300px;
-      height: 200px;
-      background-color: red;
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Arial", sans-serif;
+        overflow-x: hidden;
+      }
 
-      
-      clip-path: polygon(
-        0% 0%,        
-        100% 0%,       
-        100% 100%,    
-        24.3% 100%
-      );
-    }
-  </style>
-</head>
-<body>
-  <div class="sliced-rectangle"></div>
-</body>
+      .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .main-section {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+
+      .blue-background {
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          #2563eb 0%,
+          #1d4ed8 50%,
+          #1e40af 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .white-section {
+        width: 40%;
+        height: 100%;
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        position: relative;
+      }
+
+      .green-accent-1 {
+        position: absolute;
+        width: 8px;
+        height: 100vh;
+        background: linear-gradient(to bottom, #10b981, #059669);
+        right: 40%;
+        top: 0;
+        transform: skew(-10deg);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+        z-index: 10;
+      }
+
+      .energy-lines {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .energy-line {
+        position: absolute;
+        width: 2px;
+        height: 100px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          #10b981,
+          transparent
+        );
+        animation: energyFlow 2s linear infinite;
+      }
+
+      .energy-line:nth-child(1) {
+        right: 38%;
+        top: 30%;
+        animation-delay: 0s;
+      }
+
+      .energy-line:nth-child(2) {
+        right: 45%;
+        top: 50%;
+        animation-delay: 0.5s;
+      }
+
+      @keyframes energyFlow {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-section">
+        <div class="blue-background"></div>
+
+        <div class="white-section"></div>
+
+        <div class="green-accent-1"></div>
+
+        <!-- <div class="energy-lines">
+          <div class="energy-line"></div>
+          <div class="energy-line"></div>
+        </div> -->
+      </div>
+    </div>
+  </body>
 </html>
