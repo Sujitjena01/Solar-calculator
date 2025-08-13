@@ -1,0 +1,114 @@
+/*------------------- Responsive --------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #1060AA;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 450px auto;
+  height: 100vh;
+  background: url("../../images/login/solar-bg.png") no-repeat center center;
+}
+@media (max-width: 767px) {
+  .main-container {
+    grid-template-rows: 200px auto;
+  }
+}
+.main-container .left-panel {
+  position: relative;
+  flex: 0 0 30%;
+  background: url("../../images/login/solar_panel_installation.png") no-repeat center center;
+  clip-path: polygon(0 100%, 100% 100%, 77% 0%, 0% 0%);
+  z-index: 2;
+}
+.main-container .left-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 99.9vh;
+  background-color: #10AA2D;
+  z-index: 2222222;
+  right: 52px;
+  transform: skew(10deg, 10deg);
+  box-shadow: 0px 0px 0px 7px #f5f5f5;
+}
+.main-container .left-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(209, 83%, 36%, 0.785);
+  z-index: 1;
+}
+.main-container .left-panel .strap-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 150%;
+  background-color: green;
+  transform: rotate(68.2deg);
+  transform-origin: top left;
+  z-index: 3;
+}
+.main-container .left-panel .overlay {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background-color: green;
+}
+.main-container .right-panel .solar-panel {
+  position: absolute;
+  top: 50%;
+  left: 188px;
+  transform: translateY(-50%);
+  z-index: 11;
+  width: 424px;
+}
+.main-container .right-panel .content {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  transform-origin: center;
+  justify-content: center;
+  gap: 50px;
+}
+.main-container .right-panel .content .logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .right-panel .content .logo-text img {
+  width: 377px;
+}
+.main-container .right-panel .content a {
+  display: block;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #1060AA;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.1803921569);
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.main-container .right-panel .content a:hover {
+  background-color: #1060AA;
+  color: white;
+}/*# sourceMappingURL=login.css.map */
