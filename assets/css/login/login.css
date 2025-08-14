@@ -1,4 +1,12 @@
 /*------------------- Responsive --------------------------*/
+.page-CAvalidate .main-container .right-panel .content {
+  gap: 20px;
+}
+.page-CAvalidate .main-container .right-panel .content a:not(.back) {
+  padding: 18px;
+  font-size: 13px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -116,7 +124,7 @@ html {
 .main-container .right-panel .content .logo-text img {
   width: 377px;
 }
-.main-container .right-panel .content a {
+.main-container .right-panel .content a:not(.back) {
   display: block;
   padding: 30px;
   border-radius: 10px;
@@ -129,7 +137,27 @@ html {
   text-decoration: none;
   transition: 0.3s;
 }
-.main-container .right-panel .content a:hover {
+.main-container .right-panel .content a:not(.back):hover {
   background-color: #1060AA;
   color: white;
+}
+.main-container .right-panel .content a:not(.back).enterCAnum {
+  cursor: text;
+}
+.main-container .right-panel .content a:not(.back).enterCAnum:hover {
+  background-color: white;
+  color: inherit;
+}
+.main-container .right-panel .content a:not(.back).Validate {
+  background-color: #1060AA;
+  color: white;
+  text-align: center;
+}
+.main-container .right-panel .content a:not(.back).Validate:hover {
+  background-color: #0d4c86;
+  color: white;
+}
+.main-container .right-panel .content a.back {
+  text-align: center;
+  text-decoration: none;
 }/*# sourceMappingURL=login.css.map */

@@ -1,5 +1,24 @@
 @import '../../css/variables/variables.scss';
 
+.page-CAvalidate {
+    .main-container {
+        .right-panel {
+            .content {
+                gap: 20px;
+
+                a:not(.back) {
+                    padding: 18px;
+                    font-size: 13px;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -123,7 +142,7 @@ html {
                 }
             }
 
-            a {
+            a:not(.back) {
                 display: block;
                 padding: 30px;
                 border-radius: 10px;
@@ -140,6 +159,33 @@ html {
                     background-color: #1060AA;
                     color: white;
                 }
+
+                &.enterCAnum {
+                    cursor: text;
+
+                    &:hover {
+                        background-color: white;
+                        color: inherit;
+                    }
+                }
+
+
+
+                &.Validate {
+                    background-color: #1060AA;
+                    color: white;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: #0d4c86;
+                        color: white;
+                    }
+                }
+            }
+
+            a.back {
+                text-align: center;
+                text-decoration: none;
             }
         }
     }
