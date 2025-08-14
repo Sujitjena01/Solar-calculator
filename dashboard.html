@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar calculator</title>
+  <link rel="stylesheet" href="assets/css/font-awesome/css/all.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/dashboard/dashboard.css">
+</head>
+<body>
+<section>
+  <header>
+    <div class="logo">
+      <img src="assets/images/TPDDL_URJA_LOGO.png" alt="Solar Calculator Logo" class="me-3">
+      
+    </div>
+
+    <div class="right-section d-flex align-items-center gap-3">
+      <div class="user-info">
+        <h4>Hello! ANKIT RAI</h4>
+        <h5>CA:816264579273</h5>
+      </div>
+      <div class="icons">
+        <img src="assets/img/User.png" alt="user-img" class="icon">
+        <img src="assets/img/line-md_chevron-up.png" alt="chevron-icon" class="icon">
+      </div>
+    </div>
+  </header>
+
+  <main class="container-fluid">
+    <div class="green-line"></div>
+
+    <div class="row gx-4 gy-4">
+     <div class="col-12 col-lg-9 mx-auto">
+
+
+        <div class="card consumer-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="fw-bold text-primary" style="color:#0066cc;">Consumer Details</div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="status">● Active</span>
+              <span class="arrow">&#9650;</span>
+            </div>
+          </div>
+          <hr>
+          <table>
+            <tr>
+              <td><strong>Catagory</strong></td>
+              <td><strong>Load (KW)</strong></td>
+              <td><strong>Monthly Average Consumption</strong></td>
+              <td><strong>Monthly Average Bill</strong></td>
+              <td><strong>Address</strong></td>
+            </tr>
+            <tr>
+              <td>Domestic</td><td>7</td><td>300</td><td>1200</td>
+              <td>Plot No. 101, badagada brit colony, BBSR-18</td>
+            </tr>
+          </table>
+        </div>
+
+      
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card solar-detailcard">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="fw-bold text-primary">Solar Details & Benefits</div>
+                <button class="edit-btn">✎ Edit</button>
+              </div>
+              <hr>
+              <table>
+                <tr><td>Solar Load (KW)</td><td>5</td></tr>
+                <tr><td>Solar monthly Generation Units (kWh)</td><td>500</td></tr>
+                <tr><td>Solar Installation Cost (Rs.)</td><td>32000</td></tr>
+                <tr><td>Central Subsidy (Rs.)</td><td>78000</td></tr>
+                <tr><td>State Subsidy (Rs.)</td><td>3000</td></tr>
+                <tr><td>Differential Cost (Rs.)</td><td>212000</td></tr>
+              </table>
+              <div class="highlight-green">
+                Generation based incentive Monthly (A) (Rs.) &nbsp; 1000
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card monthly-billsaving-card">
+              <div class="fw-bold text-primary">Monthly Bill Saving</div>
+              <hr>
+              <div>Monthly Consumption (kWh)</div>
+              <div</div>
+              <br>
+              <div>Monthly Bill (Rs.)</div>
+              <div></div>
+              <div class="highlight-green">
+                Monthly Bill Saving (B) (Rs.) &nbsp; 1250
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="row g-4 mt-0">
+          <div class="col-md-6">
+            <div class="card excess-card">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="fw-bold text-primary">Excess Solar Generation</div>
+                
+              </div>
+              <hr>
+              <table>
+                <tr><td>Excess Units</td><td>5</td></tr>
+                <tr><td>Power Purchase Rate</td><td>500</td></tr>
+                
+              </table>
+              <div class="highlight-green">
+                Generation based incentive Monthly (A) (Rs.) &nbsp; 1000
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card emi-card">
+              <div class="fw-bold text-primary">EMI amount & Payback</div>
+              <hr>
+              <div>Monthly Consumption (kWh)</div>
+            
+              <br>
+              <div>Monthly Bill (Rs.)</div>
+             
+              <div class="highlight-green">
+                Monthly Bill Saving (B) (Rs.) &nbsp; 1250
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      
+      
+      <div class="col-12 col-lg-3">
+        <div class="card summary-cards">
+          <div class="summary-top">
+            <div class="amount">₹1028</div>
+            <div class="label">Total Monthly Saving<br>(Post Subsidy)</div>
+          </div>
+
+          <div class="summary-box combined">
+  <div class="summary-item">
+    <div class="amount">₹212000</div>
+    <div class="label">Total expense for solar plant installation before loan (After Govt Subsidy)</div>
+  </div>
+
+  <div class="summary-item">
+    <div class="amount">₹260922</div>
+    <div class="label">Total expense for solar plant installation After loan (After Govt Subsidy) (Rs.)</div>
+  </div>
+
+  <div class="summary-item">
+    <div class="amount">₹214695</div>
+    <div class="label">Total Income after solar plant installation (25 years) (Rs.)</div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

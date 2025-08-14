@@ -16,7 +16,7 @@ html {
   display: grid;
   grid-template-columns: 450px auto;
   height: 100vh;
-  background-image: url("../../images/login/solar-bg.webp");
+  background-image: url("../../images/solar-bg.webp");
   background-size: cover;
   overflow: hidden;
 }

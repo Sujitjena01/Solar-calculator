@@ -1,0 +1,231 @@
+@import '../../css/variables/variables.scss';
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../../images/solar-bg.webp");
+    background-color: aquamarine;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background: linear-gradient(rgba(16, 96, 170, 0.86),
+            rgba(16, 96, 170, 0.86)),
+        url("../../images/dashboard/Header_bg.webp");
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 110px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo .divider {
+    width: 2px;
+    height: 50px;
+    background-color: white;
+    margin: 0 15px;
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+    font-size: clamp(18px, 3vw, 28px);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: white;
+}
+
+.user-info h4,
+.user-info h5 {
+    margin: 0;
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.green-line {
+    height: 6px;
+    background-color: green;
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+
+.card {
+    font-family: Arial, sans-serif;
+    border-radius: 4px;
+}
+
+.consumer-card {
+    padding: 10px;
+    height: 170px;
+    border: 1px solid #ddd;
+
+}
+
+.consumer-card table {
+    width: 100%;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+.consumer-card td {
+    padding: 2px 5px;
+}
+
+.consumer-card td strong {
+    font-weight: bold;
+}
+
+.consumer-card hr {
+    margin: 5px 0;
+}
+
+.consumer-card .status {
+    color: green;
+    font-size: 14px;
+}
+
+.consumer-card .arrow {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.solar-detailcard,
+.monthly-billsaving-card,
+.excess-card,
+.emi-card {
+    height: 340px;
+    padding: 10px;
+    margin: 5px 0;
+
+}
+
+.solar-detailcard table,
+.monthly-billsaving-card table,
+.excess-card table {
+    width: 100%;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+.edit-btn {
+    background: #e6f0ff;
+    border: none;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.highlight-green {
+    background: #d9f7d9;
+    padding: 8px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+
+.summary-cards {
+    height: 700px;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(174deg, var(--Blue, #1060AA) 2.56%, var(--Green, #10AA2D) 92.99%);
+    border: none;
+    font-family: Arial, sans-serif;
+}
+
+.summary-top {
+    background: linear-gradient(to bottom, #00b050, #007b43);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 2px solid #00b050;
+}
+
+.summary-top .amount {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.summary-top .label {
+    font-size: 14px;
+}
+
+.summary-box.combined {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #00b050;
+}
+
+
+.summary-box.combined {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #00b050;
+}
+
+.summary-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item .amount {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00b050;
+}
+
+.summary-item .label {
+    font-size: 13px;
+    color: #333;
+}
