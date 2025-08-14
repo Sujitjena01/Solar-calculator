@@ -116,13 +116,20 @@ html {
             .input_div {
                 display: grid;
 
+
                 input {
                     padding: 30px;
                     border-radius: 10px;
                     border: 1px solid #1060AA;
                     font-size: 17px;
+
                     background-color: white;
                     box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.1803921569);
+                }
+                &.cal {
+                    input {
+                        font-size: 13px;
+                    }
                 }
 
                 .information {
@@ -191,6 +198,22 @@ html {
                 a,
                 input {
                     padding: 18px;
+                }
+
+                .back {
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 0px;
+                    font-weight: 700;
+                }
+            }
+
+            &.content_calculate {
+                gap: 18px;
+
+                a,
+                input {
+                    padding: 13px;
                 }
 
                 .back {

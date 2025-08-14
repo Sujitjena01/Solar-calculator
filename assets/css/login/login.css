@@ -119,6 +119,9 @@ html {
   background-color: white;
   box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.1803921569);
 }
+.main-container .right-panel .content .input_div.cal input {
+  font-size: 13px;
+}
 .main-container .right-panel .content .input_div .information {
   font-size: 14px;
   margin-top: 5px;
@@ -172,6 +175,19 @@ html {
   padding: 18px;
 }
 .main-container .right-panel .content.content_validate .back {
+  text-align: center;
+  text-decoration: none;
+  padding: 0px;
+  font-weight: 700;
+}
+.main-container .right-panel .content.content_calculate {
+  gap: 18px;
+}
+.main-container .right-panel .content.content_calculate a,
+.main-container .right-panel .content.content_calculate input {
+  padding: 13px;
+}
+.main-container .right-panel .content.content_calculate .back {
   text-align: center;
   text-decoration: none;
   padding: 0px;
