@@ -1,24 +1,5 @@
 @import '../../css/variables/variables.scss';
 
-.page-CAvalidate {
-    .main-container {
-        .right-panel {
-            .content {
-                gap: 20px;
-
-                a:not(.back) {
-                    padding: 18px;
-                    font-size: 13px;
-                }
-
-            }
-
-        }
-
-    }
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -126,11 +107,30 @@ html {
             justify-content: center;
             gap: 50px;
             position: relative;
-            z-index: 1111;
+            z-index: 333333;
 
             @media #{$mobile_device} {
                 padding: 30px;
             }
+
+            .input_div {
+                display: grid;
+
+                input {
+                    padding: 30px;
+                    border-radius: 10px;
+                    border: 1px solid #1060AA;
+                    font-size: 17px;
+                    background-color: white;
+                    box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.1803921569);
+                }
+
+                .information {
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+            }
+
 
             .logo-text {
                 display: flex;
@@ -183,9 +183,22 @@ html {
                 }
             }
 
-            a.back {
-                text-align: center;
-                text-decoration: none;
+
+
+            &.content_validate {
+                gap: 25px;
+
+                a,
+                input {
+                    padding: 18px;
+                }
+
+                .back {
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 0px;
+                    font-weight: 700;
+                }
             }
         }
     }

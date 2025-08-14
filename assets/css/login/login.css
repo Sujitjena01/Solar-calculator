@@ -1,12 +1,4 @@
 /*------------------- Responsive --------------------------*/
-.page-CAvalidate .main-container .right-panel .content {
-  gap: 20px;
-}
-.page-CAvalidate .main-container .right-panel .content a:not(.back) {
-  padding: 18px;
-  font-size: 13px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -109,12 +101,27 @@ html {
   justify-content: center;
   gap: 50px;
   position: relative;
-  z-index: 1111;
+  z-index: 333333;
 }
 @media (max-width: 767px) {
   .main-container .right-panel .content {
     padding: 30px;
   }
+}
+.main-container .right-panel .content .input_div {
+  display: grid;
+}
+.main-container .right-panel .content .input_div input {
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #1060AA;
+  font-size: 17px;
+  background-color: white;
+  box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.1803921569);
+}
+.main-container .right-panel .content .input_div .information {
+  font-size: 14px;
+  margin-top: 5px;
 }
 .main-container .right-panel .content .logo-text {
   display: flex;
@@ -157,7 +164,16 @@ html {
   background-color: #0d4c86;
   color: white;
 }
-.main-container .right-panel .content a.back {
+.main-container .right-panel .content.content_validate {
+  gap: 25px;
+}
+.main-container .right-panel .content.content_validate a,
+.main-container .right-panel .content.content_validate input {
+  padding: 18px;
+}
+.main-container .right-panel .content.content_validate .back {
   text-align: center;
   text-decoration: none;
+  padding: 0px;
+  font-weight: 700;
 }/*# sourceMappingURL=login.css.map */

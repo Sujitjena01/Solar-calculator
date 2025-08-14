@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Solar Calculator</title>
-        <link rel="stylesheet" href="assets/css/login/login.css">
-    </head>
-    <body class="page-CAvalidate">
-
-        <div class="main-container">
-            <div class="left-panel">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar Calculator</title>
+    <link rel="stylesheet" href="assets/css/login/login.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome/css/all.css" />
+  </head>
+  <body class="page-CAvalidate">
+    <div class="main-container">
+      <div class="left-panel">
         <img src="assets/images/login/Left_Solar.webp" alt="" />
       </div>
-            <div class="right-panel">
-                <div class="content">
-                    <div class="logo-text">
-                        <img src="assets/images/TPDDL_URJA_LOGO.png"
-                            alt="TATA URJA Logo">
-                    </div>
-                    <a class="enterCAnum" href="#">Enter CA Number</a>
-                    <a class="Validate" href="#">Validate CA number</a>
-                    <a  class="back" href="#">Go Back?</a>
-
-                </div>
-                <!-- <img class="solar-panel"
+      <div class="right-panel">
+        <div class="content content_validate">
+          <div class="logo-text">
+            <img src="assets/images/TPDDL_URJA_LOGO.png" alt="TATA URJA Logo" />
+          </div>
+          <div class="input_div">
+            <input type="text" placeholder="Enter CA Number" />
+          </div>
+          <div class="input_div">
+            <input type="number" placeholder="Enter Solar Load" />
+            <p class="information">(Maximum 100 KW)</p>
+          </div>
+          <a class="Validate" href="#">Validate CA number</a>
+          <a class="back" href="#"
+            ><i class="fa-solid fa-arrow-left"></i> Go Back?</a
+          >
+        </div>
+        <!-- <img class="solar-panel"
                     src="assets/images/login/solar_panel_3d.png"
                     alt="Solar Panels"> -->
-            </div>
-        </div>
-
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
