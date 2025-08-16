@@ -6,186 +6,230 @@
     <title>Solar calculator</title>
     <link rel="stylesheet" href="assets/css/font-awesome/css/all.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dashboard/dashboard.css" />
   </head>
   <body>
-    <section>
-      <header>
-        <div class="logo">
-          <img src="assets/images/TPDDL_URJA_LOGO.png"
-            alt="Solar Calculator Logo" class="me-3">
+    <header>
+      <div class="logo">
+        <img
+          src="assets/images/TPDDL_URJA_LOGO_white.webp"
+          alt="TPDDL_URJA_LOGO"
+          class="me-3"
+        />
+      </div>
+
+      <div class="right-section">
+        <div class="user-info">
+          <p><span>Hello!</span> ANKIT RAI</p>
+          <p><span>CA No.</span>:816264579273</p>
         </div>
-
-        <div class="right-section d-flex align-items-center gap-3">
-          <div class="user-info">
-            <h4>Hello! ANKIT RAI</h4>
-            <h5>CA:816264579273</h5>
-          </div>
-          <div class="icons">
-            <i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-angle-down"></i>
-          </div>
+        <div class="icons">
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-angle-down"></i>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main class="container-fluid">
-        <div class="green-line"></div>
-
-        <div class="row gx-2 gy-2">    
-          
-          <div class="col-12 col-lg-9">
-            <div class="accordion" id="solarAccordion">
-
-              
-              <div class="accordion-item mb-2">
+    <main class="main">
+      <div class="left">
+        <div class="accordion" id="solarAccordion">
+          <div class="">
+            <div class="col-md-12">
+              <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                    Consumer Details 
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                  >
+                    Consumer Details
                     <div class="d-flex align-items-center gap-2 ms-2">
                       <span class="status">● Active</span>
-                      
                     </div>
                   </button>
                 </h2>
-                <div id="collapseOne"
-                  class="accordion-collapse collapse show">
+                <div id="collapseOne" class="accordion-collapse collapse show">
                   <div class="accordion-body">
                     <div class="row">
-                      <div class="col-md-3"><strong>Category:</strong> Domestic</div>
+                      <div class="col-md-3">
+                        <strong>Category:</strong> Domestic
+                      </div>
                       <div class="col-md-3"><strong>Load (KW):</strong> 7</div>
-                      <div class="col-md-3"><strong>Monthly Avg. Consumption:</strong> 300</div>
-                      <div class="col-md-3"><strong>Monthly Avg. Bill:</strong> 1200</div>
-                      <div class="col-md-12"><strong>Address:</strong> Plot No. 101, badagada brit colony, BBSR-18</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                
-                <div class="col-lg-6">
-                  <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingTwo">
-                      <button class="accordion-button" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo">
-                        Solar Details & Benefits
-                      </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse show">
-                      <div class="accordion-body">
-                        <ul class="list-group">
-                          <li class="list-group-item">Solar Load (KW): 5</li>
-                          <li class="list-group-item">Solar monthly Generation Units (kWh): 500</li>
-                          <li class="list-group-item">Solar Installation Cost (Rs.): 32000</li>
-                          <li class="list-group-item">Central Subsidy (Rs.): 78000</li>
-                          <li class="list-group-item">State Subsidy (Rs.): 3000</li>
-                          <li class="list-group-item">Differential Cost (Rs.): 212000</li>
-                          <li class="list-group-item bg-success text-white">Generation based incentive Monthly (A): 1000</li>
-                        </ul>
+                      <div class="col-md-3">
+                        <strong>Monthly Avg. Consumption:</strong> 300
+                      </div>
+                      <div class="col-md-3">
+                        <strong>Monthly Avg. Bill:</strong> 1200
+                      </div>
+                      <div class="col-md-12">
+                        <strong>Address:</strong> Plot No. 101, badagada brit
+                        colony, BBSR-18
                       </div>
                     </div>
                   </div>
-                </div>
-
-                
-                <div class="col-lg-6">
-                  <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingThree">
-                      <button class="accordion-button" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree">
-                        Monthly Bill Saving
-                      </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse show">
-                      <div class="accordion-body">
-                        <p><strong>Before:</strong> 1250 Rs | <strong>After:</strong> 0 Rs</p>
-                        <p class="bg-success text-white p-2 rounded">Monthly Bill Saving (B): 1250</p>
-                        <div class="bg-light p-3 text-center border rounded">[Chart Placeholder]</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="col-lg-6">
-                  <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingFour">
-                      <button class="accordion-button" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour">
-                        Excess Solar Generation
-                      </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse show">
-                      <div class="accordion-body">
-                        <ul class="list-group">
-                          <li class="list-group-item">Excess Units: -200</li>
-                          <li class="list-group-item">Power Purchase Rate: 5.5</li>
-                          <li class="list-group-item bg-success text-white">Excess Solar Benefits (C): -1100</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="col-lg-6">
-                  <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="headingFive">
-                      <button class="accordion-button" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive">
-                        EMI Amount & Payback
-                      </button>
-                    </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse show">
-                      <div class="accordion-body">
-                        <p>EMI (Before Subsidy): 2725</p>
-                        <p>EMI (Post Subsidy): 1476</p>
-                        <p>Net Outflow (Rs.): 260922</p>
-                        <p>Payback Years: 5.8</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          
-          <div class="col-12 col-lg-3 vh-100 ">
-            <div class="card summary-cards">
-              <div class="summary-top">
-                <div class="amount">₹1028</div>
-                <div class="label">Total Monthly Saving<br>(Post Subsidy)</div>
-              </div>
-
-              <div class="summary-box combined">
-                <div class="summary-item">
-                  <div class="amount">₹212000</div>
-                  <div class="label">Total expense for solar plant installation before loan (After Govt Subsidy)</div>
-                </div>
-
-                <div class="summary-item">
-                  <div class="amount">₹260922</div>
-                  <div class="label">Total expense for solar plant installation After loan (After Govt Subsidy) (Rs.)</div>
-                </div>
-
-                <div class="summary-item">
-                  <div class="amount">₹214695</div>
-                  <div class="label">Total Income after solar plant installation (25 years) (Rs.)</div>
                 </div>
               </div>
             </div>
           </div>
 
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                  >
+                    Solar Details & Benefits
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">Solar Load (KW): 5</li>
+                      <li class="list-group-item">
+                        Solar monthly Generation Units (kWh): 500
+                      </li>
+                      <li class="list-group-item">
+                        Solar Installation Cost (Rs.): 32000
+                      </li>
+                      <li class="list-group-item">
+                        Central Subsidy (Rs.): 78000
+                      </li>
+                      <li class="list-group-item">State Subsidy (Rs.): 3000</li>
+                      <li class="list-group-item">
+                        Differential Cost (Rs.): 212000
+                      </li>
+                      <li class="list-group-item bg-success text-white">
+                        Generation based incentive Monthly (A): 1000
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                  >
+                    Monthly Bill Saving
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse show"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      <strong>Before:</strong> 1250 Rs |
+                      <strong>After:</strong> 0 Rs
+                    </p>
+                    <p class="bg-success text-white p-2 rounded">
+                      Monthly Bill Saving (B): 1250
+                    </p>
+                    <div class="bg-light p-3 text-center border rounded">
+                      [Chart Placeholder]
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                  >
+                    Excess Solar Generation
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">Excess Units: -200</li>
+                      <li class="list-group-item">Power Purchase Rate: 5.5</li>
+                      <li class="list-group-item bg-success text-white">
+                        Excess Solar Benefits (C): -1100
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                  >
+                    EMI Amount & Payback
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <p>EMI (Before Subsidy): 2725</p>
+                    <p>EMI (Post Subsidy): 1476</p>
+                    <p>Net Outflow (Rs.): 260922</p>
+                    <p>Payback Years: 5.8</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </section>
+      </div>
+
+      <div class="right">
+        <div class="summary-cards">
+          <div class="summary-top">
+            <div class="amount">₹1028</div>
+            <div class="label">Total Monthly Saving<br />(Post Subsidy)</div>
+          </div>
+
+          <div class="summary-box combined">
+            <div class="summary-item">
+              <div class="amount">₹212000</div>
+              <div class="label">
+                Total expense for solar plant installation before loan (After
+                Govt Subsidy)
+              </div>
+            </div>
+
+            <div class="summary-item">
+              <div class="amount">₹260922</div>
+              <div class="label">
+                Total expense for solar plant installation After loan (After
+                Govt Subsidy) (Rs.)
+              </div>
+            </div>
+
+            <div class="summary-item">
+              <div class="amount">₹214695</div>
+              <div class="label">
+                Total Income after solar plant installation (25 years) (Rs.)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>

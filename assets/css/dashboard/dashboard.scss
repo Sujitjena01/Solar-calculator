@@ -4,9 +4,9 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url("../../images/solar-bg.webp");
-    background-color: aquamarine;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 header {
@@ -15,85 +15,117 @@ header {
         url("../../images/dashboard/Header_bg.webp");
     background-size: cover;
     background-position: center;
-    min-height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    padding: 10px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0px;
+        width: 100%;
+        height: 6px;
+        background-color: #007b43;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+
+        img {
+            width: 170px;
+        }
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .user-info {
+            p {
+                color: #fff;
+                font-size: 13px;
+                margin: 0px;
+                text-align: right;
+
+                span {
+                    font-weight: 700;
+                    font-size: 12px;
+                }
+            }
+
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            i {
+                color: #fff;
+            }
+
+            .fa-user {
+                background: linear-gradient(to bottom, #80c3ff, #0a68bb);
+                padding: 10px;
+                border-radius: 50%;
+            }
+        }
+    }
 }
 
-main {
-    margin-top: 110px;
-}
+.main {
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: auto 215px;
+    gap: 15px;
+    padding: 0px 10px 0px 10px;
 
-.logo {
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    border-radius: 5px;
-}
+    .left {
+        max-height: calc(100vh - 90px);
 
-.logo img {
-    height: 60px;
-}
+        .accordion-item {
+            box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.17);
+            border-radius: 10px;
 
-.logo .divider {
-    width: 2px;
-    height: 50px;
-    background-color: white;
-    margin: 0 15px;
-}
+            .accordion-button {
+                background: #fff;
+                color: #1060AA;
+                font-weight: 700;
+                border-radius: 10px 10px 0px 0px;
 
-.logo h1 {
-    color: white;
-    margin: 0;
-    font-size: clamp(18px, 3vw, 28px);
-}
+                &::after {
+                    color: #1060AA;
+                }
 
-.user-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    color: white;
-}
+                &:not(.collapsed) {
+                    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 #1060aa;
+                }
 
-.user-info h4,
-.user-info h5 {
-    margin: 0;
-    font-size: clamp(12px, 2vw, 16px);
-}
+                .status {
+                    color: #00b050;
+                }
+            }
+        }
+    }
 
-.icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.green-line {
-    height: 6px;
-    background-color: green;
-    width: 100%;
-    margin: 10px 0;
+    .right {
+        border-radius: 10px;
+        background: linear-gradient(174deg, var(--Blue, #1060AA) 2.56%, var(--Green, #10AA2D) 92.99%);
+        position: sticky;
+        top: 0px
+    }
 }
 
 
-
-.card {
-    font-family: Arial, sans-serif;
-    border-radius: 4px;
-}
 
 .consumer-card {
     padding: 10px;
@@ -166,12 +198,10 @@ main {
 
 
 .summary-cards {
-    height: 700px;
+    // height: 700px;
     padding: 15px;
     border-radius: 10px;
-    background: linear-gradient(174deg, var(--Blue, #1060AA) 2.56%, var(--Green, #10AA2D) 92.99%);
-    border: none;
-    font-family: Arial, sans-serif;
+    // background: linear-gradient(174deg, var(--Blue, #1060AA) 2.56%, var(--Green, #10AA2D) 92.99%);
 }
 
 .summary-top {
