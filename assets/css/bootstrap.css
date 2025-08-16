@@ -1345,6 +1345,7 @@ progress {
     width: 25%
   }
 
+
   .col-md-4 {
     flex: 0 0 auto;
     width: 33.33333333%
@@ -5249,8 +5250,16 @@ fieldset:disabled .btn {
 .accordion-item {
   color: var(--bs-accordion-color);
   background-color: var(--bs-accordion-bg);
-  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color)
+  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
 }
+
+
+.accordion-item strong {
+  color: #212529d1;
+  ;
+
+}
+
 
 .accordion-item:first-of-type {
   border-top-left-radius: var(--bs-accordion-border-radius);
@@ -9463,7 +9472,7 @@ fieldset:disabled .btn {
 
 .text-white {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important
+  color: #343a40 !important;
 }
 
 .text-body {
@@ -9732,7 +9741,7 @@ fieldset:disabled .btn {
 
 .bg-success {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important
+  background-color: rgb(212 255 220) !important;
 }
 
 .bg-info {
