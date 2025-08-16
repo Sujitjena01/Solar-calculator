@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  color: #1060AA;
 }
 
 body,
@@ -111,13 +110,13 @@ html {
 .main-container .right-panel .content .input_div {
   display: grid;
 }
-.main-container .right-panel .content .input_div input {
+.main-container .right-panel .content .input_div input, .main-container .right-panel .content .input_div select {
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #1060AA;
   font-size: 17px;
   background-color: white;
-  box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.1803921569);
+  box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.18);
 }
 .main-container .right-panel .content .input_div.cal input {
   font-size: 13px;
@@ -125,6 +124,62 @@ html {
 .main-container .right-panel .content .input_div .information {
   font-size: 14px;
   margin-top: 5px;
+}
+.main-container .right-panel .content .input_div.custom-dropdown {
+  position: relative;
+}
+.main-container .right-panel .content .input_div.custom-dropdown .selected {
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #1060AA;
+  background-color: white;
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.18);
+}
+.main-container .right-panel .content .input_div.custom-dropdown .selected .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.main-container .right-panel .content .input_div.custom-dropdown .selected i.arrow {
+  font-size: 14px;
+}
+.main-container .right-panel .content .input_div.custom-dropdown .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #1060AA;
+  border-radius: 10px;
+  margin-top: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.main-container .right-panel .content .input_div.custom-dropdown .options li {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-container .right-panel .content .input_div.custom-dropdown .options li .icon {
+  width: 20px;
+  height: 20px;
+}
+.main-container .right-panel .content .input_div.custom-dropdown .options li:hover {
+  background-color: #1060AA;
+  color: white;
+}
+.main-container .right-panel .content .input_div.custom-dropdown.active .options {
+  display: block;
 }
 .main-container .right-panel .content .logo-text {
   display: flex;
@@ -142,7 +197,7 @@ html {
   font-size: 17px;
   cursor: pointer;
   background-color: white;
-  box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.1803921569);
+  box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.18);
   text-align: center;
   text-decoration: none;
   transition: 0.3s;
@@ -184,7 +239,7 @@ html {
   gap: 18px;
 }
 .main-container .right-panel .content.content_calculate a,
-.main-container .right-panel .content.content_calculate input {
+.main-container .right-panel .content.content_calculate input, .main-container .right-panel .content.content_calculate select {
   padding: 13px;
 }
 .main-container .right-panel .content.content_calculate .back {

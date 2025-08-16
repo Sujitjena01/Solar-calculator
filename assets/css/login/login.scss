@@ -1,228 +1,283 @@
 @import '../../css/variables/variables.scss';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    color: #1060AA;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body,
 html {
-    height: 100%;
+  height: 100%;
 }
 
 .main-container {
-    display: grid;
-    grid-template-columns: 450px auto;
-    height: 100vh;
-    background-image: url('../../images/solar-bg.webp');
-    background-size: cover;
-    overflow: hidden;
+  display: grid;
+  grid-template-columns: 450px auto;
+  height: 100vh;
+  background-image: url('../../images/solar-bg.webp');
+  background-size: cover;
+  overflow: hidden;
+
+  @media #{$mobile_device} {
+    grid-template-rows: 200px auto;
+    grid-template-columns: auto;
+  }
+
+  .left-panel {
+    position: relative;
+    flex: 0 0 30%;
+    z-index: 3333;
 
     @media #{$mobile_device} {
-        grid-template-rows: 200px auto;
-        grid-template-columns: auto;
+      background: url('../../images/login/solar_panel_installation.png') no-repeat center center;
+      clip-path: none;
+      background-size: cover;
     }
 
-    .left-panel {
-        position: relative;
-        flex: 0 0 30%;
-        z-index: 3333;
+    img {
+      height: 100vh;
 
-        @media #{$mobile_device} {
-            background: url('../../images/login/solar_panel_installation.png') no-repeat center center;
-            clip-path: none;
-            background-size: cover;
+      @media #{$mobile_device} {
+        display: none;
+      }
+    }
+
+    &::before {
+      @media #{$mobile_device} {
+        content: "";
+        position: absolute;
+        top: 186px;
+        width: 100%;
+        height: 7px;
+        right: 0px;
+        transform: none;
+        box-shadow: 0px 0px 0px 7px #f5f5f5;
+        background-color: #10AA2D;
+        z-index: 2222222;
+      }
+    }
+
+    &::after {
+      @media #{$mobile_device} {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: hsla(209, 83%, 36%, 0.785);
+        z-index: 1;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: -5px;
+      width: 5px;
+      height: 100%;
+      background-color: green;
+    }
+  }
+
+  .right-panel {
+    .solar-panel {
+      position: absolute;
+      top: 50%;
+      left: 188px;
+      transform: translateY(-50%);
+      z-index: 11;
+      width: 424px;
+
+      @media #{$mobile_device} {
+        display: none;
+      }
+    }
+
+    .content {
+      height: 100%;
+      display: grid;
+      align-content: center;
+      transform-origin: center;
+      justify-content: center;
+      gap: 50px;
+      position: relative;
+      z-index: 333333;
+
+      @media #{$mobile_device} {
+        padding: 30px;
+      }
+
+      .input_div {
+        display: grid;
+
+        input, select {
+          padding: 30px;
+          border-radius: 10px;
+          border: 1px solid #1060AA;
+          font-size: 17px;
+          background-color: white;
+          box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.18);
         }
+
+        &.cal input {
+          font-size: 13px;
+        }
+
+        .information {
+          font-size: 14px;
+          margin-top: 5px;
+        }
+
+        // Custom dropdown
+        &.custom-dropdown {
+          position: relative;
+
+          .selected {
+            padding: 13px;
+            border-radius: 10px;
+            border: 1px solid #1060AA;
+            background-color: white;
+            font-size: 17px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.18);
+
+            .icon {
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
+            }
+
+            i.arrow {
+              font-size: 14px;
+            }
+          }
+
+          .options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #1060AA;
+            border-radius: 10px;
+            margin-top: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+
+            li {
+              padding: 10px 15px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              .icon {
+                width: 20px;
+                height: 20px;
+              }
+
+              &:hover {
+                background-color: #1060AA;
+                color: white;
+              }
+            }
+          }
+
+          &.active .options {
+            display: block;
+          }
+        }
+      }
+
+      .logo-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
-            height: 100vh;
+          width: 377px;
+        }
+      }
 
-            @media #{$mobile_device} {
-                display: none;
-            }
+      a:not(.back) {
+        display: block;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #1060AA;
+        font-size: 17px;
+        cursor: pointer;
+        background-color: white;
+        box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.18);
+        text-align: center;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #1060AA;
+          color: white;
         }
 
-        &::before {
-            @media #{$mobile_device} {
-                content: "";
-                position: absolute;
-                top: 186px;
-                width: 100%;
-                height: 7px;
-                right: 0px;
-                transform: none;
-                box-shadow: 0px 0px 0px 7px #f5f5f5;
-                background-color: #10AA2D;
-                z-index: 2222222;
-            }
+        &.enterCAnum {
+          cursor: text;
+
+          &:hover {
+            background-color: white;
+            color: inherit;
+          }
         }
 
-        &::after {
-            @media #{$mobile_device} {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: hsla(209, 83%, 36%, 0.785);
-                z-index: 1;
-            }
+        &.Validate {
+          background-color: #1060AA;
+          color: white;
+          text-align: center;
+
+          &:hover {
+            background-color: #0d4c86;
+            color: white;
+          }
+        }
+      }
+
+      &.content_validate {
+        gap: 25px;
+
+        a,
+        input {
+          padding: 18px;
         }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            right: -5px;
-            width: 5px;
-            height: 100%;
-            background-color: green;
+        .back {
+          text-align: center;
+          text-decoration: none;
+          padding: 0px;
+          font-weight: 700;
+        }
+      }
+
+      &.content_calculate {
+        gap: 18px;
+
+        a,
+        input, select {
+          padding: 13px;
         }
 
-
+        .back {
+          text-align: center;
+          text-decoration: none;
+          padding: 0px;
+          font-weight: 700;
+        }
+      }
     }
-
-    .right-panel {
-        .solar-panel {
-            position: absolute;
-            top: 50%;
-            left: 188px;
-            transform: translateY(-50%);
-            z-index: 11;
-            width: 424px;
-
-            @media #{$mobile_device} {
-                display: none;
-            }
-        }
-
-        .content {
-            height: 100%;
-            display: grid;
-            align-content: center;
-            transform-origin: center;
-            justify-content: center;
-            gap: 50px;
-            position: relative;
-            z-index: 333333;
-
-            @media #{$mobile_device} {
-                padding: 30px;
-            }
-
-            .input_div {
-                display: grid;
-
-
-                input {
-                    padding: 30px;
-                    border-radius: 10px;
-                    border: 1px solid #1060AA;
-                    font-size: 17px;
-
-                    background-color: white;
-                    box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.1803921569);
-                }
-                &.cal {
-                    input {
-                        font-size: 13px;
-                    }
-                }
-
-                .information {
-                    font-size: 14px;
-                    margin-top: 5px;
-                }
-            }
-
-
-            .logo-text {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    width: 377px;
-                }
-            }
-
-            a:not(.back) {
-                display: block;
-                padding: 30px;
-                border-radius: 10px;
-                border: 1px solid #1060AA;
-                font-size: 17px;
-                cursor: pointer;
-                background-color: white;
-                box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.1803921569);
-                text-align: center;
-                text-decoration: none;
-                transition: 0.3s;
-
-                &:hover {
-                    background-color: #1060AA;
-                    color: white;
-                }
-
-                &.enterCAnum {
-                    cursor: text;
-
-                    &:hover {
-                        background-color: white;
-                        color: inherit;
-                    }
-                }
-
-
-
-                &.Validate {
-                    background-color: #1060AA;
-                    color: white;
-                    text-align: center;
-
-                    &:hover {
-                        background-color: #0d4c86;
-                        color: white;
-                    }
-                }
-            }
-
-
-
-            &.content_validate {
-                gap: 25px;
-
-                a,
-                input {
-                    padding: 18px;
-                }
-
-                .back {
-                    text-align: center;
-                    text-decoration: none;
-                    padding: 0px;
-                    font-weight: 700;
-                }
-            }
-
-            &.content_calculate {
-                gap: 18px;
-
-                a,
-                input {
-                    padding: 13px;
-                }
-
-                .back {
-                    text-align: center;
-                    text-decoration: none;
-                    padding: 0px;
-                    font-weight: 700;
-                }
-            }
-        }
-    }
+  }
 }

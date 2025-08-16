@@ -6,17 +6,25 @@
     <title>Solar Calculator</title>
     <link rel="stylesheet" href="assets/css/login/login.css" />
     <link rel="stylesheet" href="assets/css/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
   </head>
   <body class="page-CAvalidate">
     <div class="main-container">
       <div class="left-panel">
-        <img src="assets/images/login/Left_Solar.webp" alt="" />
+        <img src="assets/images/login/Left_Solar.webp" alt />
       </div>
       <div class="right-panel">
         <div class="content content_calculate">
           <div class="logo-text">
             <img src="assets/images/TPDDL_URJA_LOGO.png" alt="TATA URJA Logo" />
+
           </div>
+          <div class="input_div">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>TPDDL</option>
+            </select>
+          </div>
+
           <div class="input_div">
             <input type="text" placeholder="Enter CA Number" />
           </div>
@@ -25,9 +33,8 @@
             <p class="information">(Maximum 100 KW)</p>
           </div>
           <a class="Validate" href="#">Validate CA number</a>
-          <a class="back" href="#"
-            ><i class="fa-solid fa-arrow-left"></i> Go Back?</a
-          >
+          <a class="back" href="#"><i class="fa-solid fa-arrow-left"></i> Go
+            Back?</a>
         </div>
         <!-- <img class="solar-panel"
                     src="assets/images/login/solar_panel_3d.png"
