@@ -6,24 +6,31 @@
     <title>Solar Calculator</title>
     <link rel="stylesheet" href="assets/css/login/login.css" />
     <link rel="stylesheet" href="assets/css/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
   </head>
   <body class="page-CAvalidate">
     <div class="main-container">
       <div class="left-panel">
-        <img src="assets/images/login/Left_Solar.webp" alt="" />
+        <img src="assets/images/login/Left_Solar.webp" alt />
       </div>
       <div class="right-panel">
-        <div class="content content_validate">
+        <div class="content content_calculate">
           <div class="logo-text">
             <img src="assets/images/TPDDL_URJA_LOGO.png" alt="TATA URJA Logo" />
           </div>
-          <div class="input_div">
-            <input type="text" placeholder="_ _ _ _ _ _" />
-            <p class="information">Otp has been sent to the registered mobile number</p>
+          <div class="form-floating">
+            <input
+              type="number"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Enter OTP</label>
+            <span>OTP has been sent to the registered mobile number</span>
           </div>
-          <a class="Validate" href="#">Validate OTP</a>
-          <a class="back" href="#"
-            ><i class="fa-solid fa-arrows-rotate"></i> Resend otp?</a
+          <button class="Validate">Submit</button>
+          <a class="back" href="CA_Validate.html"
+            ><i class="fa-solid fa-rotate-right"></i> Resend OTP</a
           >
         </div>
       </div>
