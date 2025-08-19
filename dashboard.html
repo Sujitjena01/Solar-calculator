@@ -6,7 +6,6 @@
     <title>Solar calculator</title>
     <link rel="stylesheet" href="assets/css/font-awesome/css/all.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dashboard/dashboard.css" />
   </head>
   <body>
@@ -309,7 +308,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/chart.js"></script>
 
     <script>
   
@@ -386,42 +385,6 @@
     }
   });
 </script>
-<script>
-  // Ensure accordion headers are tabbable and can be activated with Enter/Space
-  document.querySelectorAll('.accordion-button').forEach(btn => {
-    btn.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        btn.click();
-      }
-    });
-  });
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const toggleBtn = document.querySelector(".dropdown-toggle");
-  const dropdown = document.querySelector(".dropdown");
 
-  // Toggle on chevron click
-  toggleBtn.addEventListener("click", function (e) {
-    e.stopPropagation();
-    dropdown.classList.toggle("open");
-  });
-
-  // Close dropdown if clicking outside
-  document.addEventListener("click", function () {
-    dropdown.classList.remove("open");
-  });
-
-  // Close dropdown on Escape key
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      dropdown.classList.remove("open");
-      toggleBtn.focus(); // optional: return focus to button
-    }
-  });
-});
-
-</script>
   </body>
 </html>

@@ -3,26 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solar Calculator</title>
+    <title>Solar Calculator - Login</title>
     <link rel="stylesheet" href="assets/css/login/login.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="page-login">
     <div class="main-container">
-      <div class="left-panel">
+      <div class="left-panel" aria-hidden="true">
         <img src="assets/images/login/Left_Solar.webp" alt />
       </div>
       <div class="right-panel">
-        <div class="content">
+        <main class="content" role="main">
           <div class="logo-text">
-            <img
-              src="assets/images/TPDDL_URJA_LOGO.webp"
-              alt="TATA URJA Logo"
-            />
+            <a href="/" aria-label="Go to Homepage">
+              <img
+                src="assets/images/TPDDL_URJA_LOGO.webp"
+                alt="TATA URJA Logo"
+              />
+            </a>
           </div>
 
-          <a class="content1" href="CA_Validate.html">Existing Consumer</a>
-          <a class="content1" href="#">Guest User</a>
-        </div>
+          <nav aria-label="Login options" class="login-options">
+            <ul>
+              <li>
+                <a class="content1" href="CA_Validate.html">
+                  Existing Consumer
+                </a>
+              </li>
+              <li>
+                <a class="content1" href="#"> Guest User </a>
+              </li>
+            </ul>
+          </nav>
+        </main>
       </div>
     </div>
   </body>

@@ -10,48 +10,86 @@
   </head>
   <body class="page-CAvalidate">
     <div class="main-container">
-      <div class="left-panel">
+      <div class="left-panel" aria-hidden="true">
         <img src="assets/images/login/Left_Solar.webp" alt />
       </div>
       <div class="right-panel">
-        <div class="content content_calculate">
+        <main class="content content_calculate" role="main">
+          <!-- Logo linking back to home -->
           <div class="logo-text">
-            <img src="assets/images/TPDDL_URJA_LOGO.png" alt="TATA URJA Logo" />
+            <a href="/" aria-label="Go to Homepage">
+              <img
+                src="assets/images/TPDDL_URJA_LOGO.png"
+                alt="TATA URJA Logo"
+              />
+            </a>
           </div>
-          <div class="form-floating">
-            <select
-              class="form-select"
-              id="floatingSelect"
-              aria-label="Floating label select example"
-            >
-              <option selected>TPDDL</option>
-            </select>
-            <label for="floatingSelect">Select Discom</label>
-          </div>
-          <div class="form-floating">
-            <input
-              type="number"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Enter CA Number</label>
-          </div>
-          <div class="form-floating">
-            <input
-              type="number"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Enter Solar Load</label>
-            <span class="information">(Maximum 100 KW)</span>
-          </div>
-          <button class="Validate">Validate CA number</button>
-          <a class="back" href="login.html"
-            ><i class="fa-solid fa-arrow-left"></i> Go Back</a
-          >
-        </div>
+
+          <!-- Accessible form -->
+          <form aria-labelledby="ca-validate-title">
+            <h1 id="ca-validate-title" class="visually-hidden">
+              CA Number Validation
+            </h1>
+
+            <!-- Select Discom -->
+            <div class="form-floating mb-3">
+              <select
+                class="form-select"
+                id="selectDiscom"
+                name="discom"
+                aria-label="Select Discom"
+                required
+              >
+                <option value="tpddl" selected>TPDDL</option>
+              </select>
+              <label for="selectDiscom">Select Discom</label>
+            </div>
+
+            <!-- CA Number -->
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="caNumber"
+                name="caNumber"
+                placeholder="Enter CA Number"
+                required
+                aria-describedby="caHelp"
+              />
+              <label for="caNumber">Enter CA Number</label>
+              <span id="caHelp" class="visually-hidden">
+                Please enter your unique CA number
+              </span>
+            </div>
+
+            <!-- Solar Load -->
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="solarLoad"
+                name="solarLoad"
+                placeholder="Enter Solar Load"
+                aria-describedby="solarHelp"
+                max="100"
+                required
+              />
+              <label for="solarLoad">Enter Solar Load</label>
+              <span id="solarHelp" class="information"> (Maximum 100 KW) </span>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="Validate w-100">
+              Validate CA number
+            </button>
+          </form>
+
+          <!-- Back link -->
+          <a class="back" href="login.html" role="Go back">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Go Back
+          </a>
+        </main>
       </div>
     </div>
   </body>

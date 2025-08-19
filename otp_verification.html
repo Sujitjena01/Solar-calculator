@@ -16,19 +16,30 @@
       <div class="right-panel">
         <div class="content content_calculate">
           <div class="logo-text">
-            <img src="assets/images/TPDDL_URJA_LOGO.png" alt="TATA URJA Logo" />
+            <a href="/" aria-label="Go to Homepage">
+              <img
+                src="assets/images/TPDDL_URJA_LOGO.png"
+                alt="TATA URJA Logo"
+              />
+            </a>
           </div>
-          <div class="form-floating">
-            <input
-              type="number"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Enter OTP</label>
-            <span>OTP has been sent to the registered mobile number</span>
-          </div>
-          <button class="Validate">Submit</button>
+          <!-- Accessible form -->
+          <form aria-labelledby="ca-validate-title">
+            <h1 id="ca-validate-title" class="visually-hidden">
+              OTP Verification
+            </h1>
+            <div class="form-floating">
+              <input
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Enter OTP</label>
+              <span>OTP has been sent to the registered mobile number</span>
+            </div>
+            <button class="Validate w-100">Submit</button>
+          </form>
           <a class="back" href="CA_Validate.html"
             ><i class="fa-solid fa-rotate-right"></i> Resend OTP</a
           >

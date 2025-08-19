@@ -1,75 +1,37 @@
-jQuery(function(){
-//sidebar toggle
-$('#nav-menu').bind('click', function() {
-    $('#sidebar').toggleClass('sidebar-open');
+
+  // Ensure accordion headers are tabbable and can be activated with Enter/Space
+  document.querySelectorAll('.accordion-button').forEach(btn => {
+    btn.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
     });
-})
-jQuery(function(){
-    //sidebar toggle
-    $('#nav-menu').bind('click', function() {
-        $('.middle-body').toggleClass('middle-body-clicked');
-    });
-})
-//menu toggle
-$(document).ready(function() {
-    $(".toggleDiv").hide();
-
-    $(".btnToggle").click(function() {
-        var div = $(this).attr("data-div");
-        $("#" + div).slideToggle();
-
-        var div1 = $(this).attr("data-chevron");
-        $("#" + div1).toggleClass('chevron-rotate-down');
-    });
-});
-
-//Hamburger
-$(document).ready(function(){
-$(".hamburger").click(function(){
-    $(this).toggleClass("is-active");
-});
-});
+  });
 
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-'use strict'
+  //Header Profile toggle
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleBtn = document.querySelector(".dropdown-toggle");
+  const dropdown = document.querySelector(".dropdown");
 
-// Fetch all the forms we want to apply custom Bootstrap validation styles to
-const forms = document.querySelectorAll('.needs-validation')
+  // Toggle on chevron click
+  toggleBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle("open");
+  });
 
-// Loop over them and prevent submission
-Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-    if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
+  // Close dropdown if clicking outside
+  document.addEventListener("click", function () {
+    dropdown.classList.remove("open");
+  });
+
+  // Close dropdown on Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      dropdown.classList.remove("open");
+      toggleBtn.focus(); // optional: return focus to button
     }
-
-    form.classList.add('was-validated')
-    }, false)
-})
-})()
-
-
-
-$('.three-dots').click(function() {
-    $('#right').toggle('fast');
+  });
 });
 
-
-// Theme Color Change
-
-$('#toggle-box-checkbox').on('change', function(){
-    if(this.checked){
-        var ls = document.createElement('link');
-        ls.rel="stylesheet";
-        ls.href="assets/css/style_dark.css";
-        document.getElementsByTagName('head')[0].appendChild(ls);
-    }else{
-        if($("link[href*=style_dark]").length){
-            $("link[href*=style_dark]").remove();
-        }
-    }
-});
-    

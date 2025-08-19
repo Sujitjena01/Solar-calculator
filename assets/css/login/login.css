@@ -13,11 +13,82 @@
 /*------------------- Fonts --------------------------*/
 /*------------------- Colors --------------------------*/
 /*------------------- Responsive --------------------------*/
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------- Fonts --------------------------*/
+/*------------------- Colors --------------------------*/
+/*------------------- Responsive --------------------------*/
+body {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+strong {
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: bold;
+}
+
+/* Generic focus style for all common interactive elements */
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible,
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible,
+[tabindex]:focus,
+[tabindex]:focus-visible,
+summary:focus,
+summary:focus-visible,
+details:focus,
+details:focus-visible {
+  outline: 3px solid #1060AA !important;
+  outline-offset: 2px;
+  border-radius: 4px;
+  /* optional */
+}
+
+/* Override Bootstrap components that suppress outlines */
+.btn:focus,
+.btn:focus-visible,
+.accordion-button:focus,
+.accordion-button:focus-visible,
+.nav-link:focus,
+.nav-link:focus-visible,
+.dropdown-item:focus,
+.dropdown-item:focus-visible,
+.page-link:focus,
+.page-link:focus-visible,
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus,
+.form-range:focus,
+.list-group-item-action:focus,
+.list-group-item-action:focus-visible {
+  box-shadow: none !important;
+  /* disable Bootstrap glow */
+  outline: 3px solid #1060AA !important;
+  outline-offset: 2px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body,
@@ -39,7 +110,7 @@ a {
 }
 @media (max-width: 767px) {
   .main-container {
-    grid-template-rows: 200px auto;
+    grid-template-rows: 100px auto;
     grid-template-columns: auto;
   }
 }
@@ -84,7 +155,7 @@ a {
   .main-container .left-panel::before {
     content: "";
     position: absolute;
-    top: 186px;
+    top: 100px;
     width: 100%;
     height: 7px;
     right: 0px;
@@ -149,6 +220,7 @@ a {
 @media (max-width: 767px) {
   .main-container .right-panel .content {
     padding: 30px;
+    align-content: baseline;
   }
 }
 .main-container .right-panel .content .form-floating .form-control,
@@ -176,6 +248,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.main-container .right-panel .content .logo-text a {
+  padding: 0px !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: unset !important;
 }
 .main-container .right-panel .content .logo-text img {
   width: 377px;
@@ -207,6 +285,11 @@ a {
 .main-container .right-panel .content .Validate:hover {
   background-color: #008e46;
   color: white;
+}
+.main-container .right-panel .content nav ul {
+  list-style: none;
+  display: grid;
+  gap: 20px;
 }
 .main-container .right-panel .content a:not(.back) {
   display: block;

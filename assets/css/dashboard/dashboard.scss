@@ -1,4 +1,5 @@
 @import '../../css/variables/variables.scss';
+@import '../../css/style.scss';
 
 body {
     margin: 0;
@@ -98,6 +99,12 @@ header {
                     cursor: pointer;
                     color: #fff;
                     font-size: 18px;
+
+                    &:focus-visible {
+                        outline: 3px solid #ffffff !important;
+                        outline-offset: 2px;
+                        border-radius: 4px;
+                    }
                 }
 
                 .dropdown-menu {
@@ -208,6 +215,8 @@ header {
                 color: #1060AA;
                 font-weight: 700;
                 border-radius: 10px 10px 0px 0px;
+                padding: 12px;
+                letter-spacing: 0.3px;
 
                 &::after {
                     color: #1060AA;

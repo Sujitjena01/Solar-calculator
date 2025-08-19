@@ -10,75 +10,86 @@
   </head>
   <body class="page-CAvalidate">
     <div class="main-container">
-      <div class="left-panel">
+      <div class="left-panel" aria-hidden="true">
         <img src="assets/images/login/Left_Solar.webp" alt />
       </div>
       <div class="right-panel">
         <div class="content content_calculate guest-content">
           <div class="logo-text">
-            <img src="assets/images/TPDDL_URJA_LOGO.png" alt="TATA URJA Logo" />
+            <a href="/" aria-label="Go to Homepage">
+              <img
+                src="assets/images/TPDDL_URJA_LOGO.png"
+                alt="TATA URJA Logo"
+              />
+            </a>
           </div>
-          <div class="form-floating">
-            <input
-              type="number"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Enter Load</label>
-          </div>
-          <div class="form-floating">
-            <input
-              type="number"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Enter Monthly Avg. Consumption</label>
-          </div>
-          <div class="form-floating">
-            <input
-              type="number"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Enter Monthly Avg. Bill</label>
-          </div>
-          <div class="form-floating">
-            <select
-              class="form-select"
-              id="floatingSelect"
-              aria-label="Floating label select example"
-            >
-              <option selected>Domestic</option>
-              <option>Commercial</option>
-            </select>
-            <label for="floatingSelect">Select Category</label>
-          </div>
-
-          <div class="form-floating">
-            <input
-              type="number"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Enter Solar Load</label>
-            <span class="information">(Maximum 100 KW)</span>
-          </div>
-          <div class="form-floating">
-            <input
-              type="number"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Enter Phone Number</label>
-          </div>
-          <button class="Validate">Submit</button>
-          <a class="back" href="login.html"
-            ><i class="fa-solid fa-arrow-left"></i> Go Back</a
+          <!-- Accessible form -->
+          <form aria-labelledby="ca-validate-title">
+            <h1 id="ca-validate-title" class="visually-hidden">
+              Guest User Entry Form
+            </h1>
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Enter Load</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Enter Monthly Avg. Consumption</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Enter Monthly Avg. Bill</label>
+            </div>
+            <div class="form-floating mb-3">
+              <select
+                class="form-select"
+                id="floatingSelect"
+                aria-label="Floating label select example"
+              >
+                <option selected>Domestic</option>
+                <option>Commercial</option>
+              </select>
+              <label for="floatingSelect">Select Category</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Enter Solar Load</label>
+              <span class="information">(Maximum 100 KW)</span>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Enter Phone Number</label>
+            </div>
+            <button class="Validate w-100">Submit</button>
+          </form>
+          <a class="back" href="login.html" role="Go back"
+            ><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Go
+            Back</a
           >
         </div>
       </div>
