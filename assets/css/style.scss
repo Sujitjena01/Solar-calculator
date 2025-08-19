@@ -1,1 +1,12 @@
 @import './variables/variables';
+
+body {
+    font-family: $roboto-regular;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+strong {
+    font-family: $roboto-bold;
+    font-weight: bold;
+}

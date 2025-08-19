@@ -2,7 +2,6 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     background-image: url("../../images/solar-bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
@@ -85,7 +84,7 @@ header {
     overflow-x: hidden;
     margin-top: 15px;
     display: grid;
-    grid-template-columns: auto 215px;
+    grid-template-columns: auto 240px;
     gap: 15px;
     padding: 0px 10px 0px 10px;
 
@@ -95,6 +94,45 @@ header {
         .accordion-item {
             box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.17);
             border-radius: 10px;
+
+            .accordion-body {
+                padding: 12px;
+
+                .list-group {
+                    li {
+                        list-style-type: none;
+                        padding: 0px 0px 10px 0px;
+                        display: flex;
+                        justify-content: space-between;
+                        font-weight: 600;
+                        color: #545253;
+
+                        span {
+                            font-weight: normal;
+                        }
+
+                        &:last-child {
+                            background-color: $light-green;
+                            padding: 7px 10px;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    &.EMI {
+                        li {
+                            &:last-child {
+                                background-color: #fff !important;
+                                padding: 0px !important;
+                            }
+                        }
+                    }
+
+                }
+
+
+            }
+
+
 
             .accordion-button {
                 background: #fff;
@@ -113,6 +151,15 @@ header {
                 .status {
                     color: #00b050;
                 }
+            }
+        }
+
+        .consumer-details {
+            display: grid;
+            grid-template-columns: auto auto auto auto 200px;
+
+            strong {
+                color: #545253;
             }
         }
     }
@@ -205,51 +252,83 @@ header {
 }
 
 .summary-top {
-    background: linear-gradient(to bottom, #00b050, #007b43);
+    background: $light-green;
     color: white;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 5px;
     text-align: center;
     margin-bottom: 15px;
-    border: 2px solid #00b050;
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.18);
+
+    h1 {
+        color: $primary-color;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+
+        i {
+            font-size: 15px;
+            margin-top: 7px;
+        }
+    }
+
+    p {
+        color: #5b5f63;
+        font-size: 13px;
+        margin: 0px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+    }
 }
 
-.summary-top .amount {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.summary-top .label {
-    font-size: 14px;
-}
-
-.summary-box.combined {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
+.summary-box {
+    border-radius: 5px;
+    border: 2px solid #FFF;
+    background: #E4FFE9;
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.18);
+    padding: 0px 12px;
     text-align: center;
-    border: 2px solid #00b050;
+
+    h1 {
+        color: $primary-color;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 2px;
+
+        i {
+            font-size: 15px;
+            margin-top: 7px;
+        }
+    }
+
+    p {
+        color: #575656;
+        font-size: 12px;
+        margin: 0px;
+        font-weight: 500;
+    }
+
+    .summary-item {
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
 }
 
 
-.summary-box.combined {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    border: 2px solid #00b050;
-}
 
-.summary-item {
-    padding: 15px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.summary-item:last-child {
-    border-bottom: none;
-}
-
-.summary-item .amount {
+.summary-item .summary-item .amount {
     font-size: 26px;
     font-weight: bold;
     color: #00b050;

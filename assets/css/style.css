@@ -1,1 +1,25 @@
-/*------------------- Responsive --------------------------*//*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------- Fonts --------------------------*/
+/*------------------- Colors --------------------------*/
+/*------------------- Responsive --------------------------*/
+body {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+strong {
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

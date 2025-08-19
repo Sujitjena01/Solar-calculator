@@ -6,6 +6,7 @@
     <title>Solar calculator</title>
     <link rel="stylesheet" href="assets/css/font-awesome/css/all.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dashboard/dashboard.css" />
   </head>
   <body>
@@ -49,22 +50,22 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show">
                   <div class="accordion-body">
-                    <div class="row text-center">
-                      <div class="col">
+                    <div class="consumer-details">
+                      <div>
                         <strong>Category</strong> <br> <span>Domestic</span>
                       </div>
-                      <div class="col">
+                      <div>
                         <strong>Load (KW)</strong> <br> <span>7</span>
                       </div>
-                      <div class="col">
+                      <div>
                         <strong>Monthly Avg. Consumption</strong> <br>
                         <span>1000</span>
                       </div>
-                      <div class="col">
+                      <div>
                         <strong>Monthly Avg. Bill</strong> <br>
                         <span>1250</span>
                       </div>
-                      <div class="col">
+                      <div>
                         <strong>Address</strong> <br>
                         <span>Plot No. 101, badagada brit colony, BBSR-18</span>
                       </div>
@@ -90,33 +91,32 @@
                 <div id="collapseTwo" class="accordion-collapse collapse show">
                   <div class="accordion-body">
                     <ul class="list-group">
-                      <li
-                        class="list-group-item d-flex justify-content-between">
-                        Solar Load (KW): <span>5</span>
+                      <li>
+                        Solar Load (KW) <span>5</span>
                       </li>
                       <li
-                        class="list-group-item d-flex justify-content-between">
-                        Solar monthly Generation Units (kWh): <span>500</span>
+                        >
+                        Solar monthly Generation Units (kWh)<span>500</span>
                       </li>
                       <li
-                        class="list-group-item d-flex justify-content-between">
-                        Solar Installation Cost (Rs.): <span>32000</span>
+                        >
+                        Solar Installation Cost (Rs.) <span>32000</span>
                       </li>
                       <li
-                        class="list-group-item d-flex justify-content-between">
-                        Central Subsidy (Rs.): <span>78000</span>
+                        >
+                        Central Subsidy (Rs.) <span>78000</span>
                       </li>
                       <li
-                        class="list-group-item d-flex justify-content-between">
-                        State Subsidy (Rs.): <span>3000</span>
+                        >
+                        State Subsidy (Rs.) <span>3000</span>
                       </li>
                       <li
-                        class="list-group-item d-flex justify-content-between">
-                        Differential Cost (Rs.): <span>212000</span>
+                        >
+                        Differential Cost (Rs.) <span>212000</span>
                       </li>
                       <li
-                        class="list-group-item bg-success text-white d-flex justify-content-between">
-                        Generation based incentive Monthly (A):
+                        >
+                        Generation based incentive Monthly (A)
                         <span class="fw-bold">1000</span>
                       </li>
                     </ul>
@@ -181,28 +181,24 @@
                 <div id="collapseFour" class="accordion-collapse collapse show">
                   <div class="accordion-body">
                     <ul class="list-group">
-                      <!-- <li
-                        class="list-group-item d-flex justify-content-between">
-                        Excess Units: <span>-200</span>
-                      </li> -->
-                      <li
-                        class="list-group-item d-flex justify-content-between">
+                     
+                      <li>
                         Excess Units: <span>200</span>
                       </li>
 
                       <li
-                        class="list-group-item d-flex justify-content-between">
+                        >
                         Power Purchase Rate: <span class=>5.5</span>
                       </li>
                       <li
-                        class="list-group-item bg-success text-white d-flex justify-content-between">
-                        Excess Solar Benefits (C): <span
+                       >
+                        Excess Solar Benefits (C) <span
                           class="fw-bold">-1100</span>
                       </li>
                     </ul>
                   </div>
                 </div>
-                s
+                
               </div>
             </div>
 
@@ -219,18 +215,13 @@
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse show">
                   <div class="accordion-body">
-                    <p class="d-flex justify-content-between">
-                      EMI (Before Subsidy): <span>2725</span>
-                    </p>
-                    <p class="d-flex justify-content-between">
-                      EMI (Post Subsidy): <span>1476</span>
-                    </p>
-                    <p class="d-flex justify-content-between">
-                      Net Outflow (Rs.): <span>260922</span>
-                    </p>
-                    <p class="d-flex justify-content-between">
-                      Payback Years: <span>5.8</span>
-                    </p>
+                    <ul class="list-group EMI">
+                      <li>EMI (Before Subsidy) <span>2725</span></li>
+                      <li>EMI (Post Subsidy) <span>1476</span></li>
+                      <li> Net Outflow (Rs.) <span>260922</span></li>
+                      <li> Payback Years <span>5.8</span></li>
+                    </ul>
+                   
                   </div>
 
                 </div>
@@ -243,32 +234,54 @@
       <div class="right">
         <div class="summary-cards">
           <div class="summary-top">
-            <div class="amount">₹1028</div>
-            <div class="label">Total Monthly Saving<br />(Post Subsidy)</div>
+            <h1><i class="fa-solid fa-indian-rupee-sign"></i>1028</h1>
+            <p>Total Monthly Saving (Post Subsidy)</p>
           </div>
 
           <div class="summary-box combined">
             <div class="summary-item">
-              <div class="amount">₹212000</div>
-              <div class="label">
+              <h1><i class="fa-solid fa-indian-rupee-sign"></i>212000</h1>
+              <p>
                 Total expense for solar plant installation before loan (After
                 Govt Subsidy)
-              </div>
+              </p>
             </div>
 
             <div class="summary-item">
-              <div class="amount">₹260922</div>
-              <div class="label">
+              <h1><i class="fa-solid fa-indian-rupee-sign"></i>260922</h1>
+              <p>
                 Total expense for solar plant installation After loan (After
                 Govt Subsidy) (Rs.)
-              </div>
+              </p>
             </div>
 
             <div class="summary-item">
-              <div class="amount">₹214695</div>
-              <div class="label">
+              <h1><i class="fa-solid fa-indian-rupee-sign"></i>214695</h1>
+              <p>
                 Total Income after solar plant installation (25 years) (Rs.)
-              </div>
+              </p>
+            </div>
+            <div class="summary-item">
+              <h1><i class="fa-solid fa-indian-rupee-sign"></i>212000</h1>
+              <p>
+                Total expense for solar plant installation before loan (After
+                Govt Subsidy)
+              </p>
+            </div>
+
+            <div class="summary-item">
+              <h1><i class="fa-solid fa-indian-rupee-sign"></i>260922</h1>
+              <p>
+                Total expense for solar plant installation After loan (After
+                Govt Subsidy) (Rs.)
+              </p>
+            </div>
+
+            <div class="summary-item">
+              <h1><i class="fa-solid fa-indian-rupee-sign"></i>214695</h1>
+              <p>
+                Total Income after solar plant installation (25 years) (Rs.)
+              </p>
             </div>
           </div>
         </div>
