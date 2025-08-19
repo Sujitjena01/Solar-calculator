@@ -49,22 +49,26 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show">
                   <div class="accordion-body">
-                    <div class="row">
-                      <div class="col-md-3">
-                        <strong>Category:</strong> Domestic
+                    <div class="row text-center">
+                      <div class="col">
+                        <strong>Category</strong> <br> <span>Domestic</span>
                       </div>
-                      <div class="col-md-3"><strong>Load (KW):</strong> 7</div>
-                      <div class="col-md-3">
-                        <strong>Monthly Avg. Consumption:</strong> 300
+                      <div class="col">
+                        <strong>Load (KW)</strong> <br> <span>7</span>
                       </div>
-                      <div class="col-md-3">
-                        <strong>Monthly Avg. Bill:</strong> 1200
+                      <div class="col">
+                        <strong>Monthly Avg. Consumption</strong> <br>
+                        <span>1000</span>
                       </div>
-                      <div class="col-md-12">
-                        <strong>Address:</strong> Plot No. 101, badagada brit
-                        colony, BBSR-18
+                      <div class="col">
+                        <strong>Monthly Avg. Bill</strong> <br>
+                        <span>1250</span>
                       </div>
-                    </div>
+                      <div class="col">
+                        <strong>Address</strong> <br>
+                        <span>Plot No. 101, badagada brit colony, BBSR-18</span>
+                      </div>
+                    </div>  
                   </div>
                 </div>
               </div>
@@ -113,7 +117,7 @@
                       <li
                         class="list-group-item bg-success text-white d-flex justify-content-between">
                         Generation based incentive Monthly (A):
-                        <span>1000</span>
+                        <span class="fw-bold">1000</span>
                       </li>
                     </ul>
 
@@ -138,15 +142,26 @@
                   class="accordion-collapse collapse show">
                   <div class="accordion-body">
                     <p>
-                      <strong>Before:</strong> 1250 Rs |
-                      <strong>After:</strong> 0 Rs
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="bg-light p-3 text-center border rounded">
+                            <canvas id="chart1"></canvas>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="bg-light p-3 text-center border rounded">
+                            <canvas id="chart2"></canvas>
+                          </div>
+                        </div>
+                      </div>
+
                     </p>
-                    <p class="bg-success text-white p-2 rounded">
-                      Monthly Bill Saving (B): 1250
+                    <p
+                      class="bg-success text-white p-2 rounded d-flex justify-content-between">
+                      <span>Monthly Bill Saving (B):</span>
+                      <span class="fw-bold">1250</span>
                     </p>
-                    <div class="bg-light p-3 text-center border rounded">
-                      [Chart Placeholder]
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -166,22 +181,28 @@
                 <div id="collapseFour" class="accordion-collapse collapse show">
                   <div class="accordion-body">
                     <ul class="list-group">
-                      <li
+                      <!-- <li
                         class="list-group-item d-flex justify-content-between">
                         Excess Units: <span>-200</span>
-                      </li>
+                      </li> -->
                       <li
                         class="list-group-item d-flex justify-content-between">
-                        Power Purchase Rate: <span>5.5</span>
+                        Excess Units: <span>200</span>
+                      </li>
+
+                      <li
+                        class="list-group-item d-flex justify-content-between">
+                        Power Purchase Rate: <span class=>5.5</span>
                       </li>
                       <li
                         class="list-group-item bg-success text-white d-flex justify-content-between">
-                        Excess Solar Benefits (C): <span>-1100</span>
+                        Excess Solar Benefits (C): <span
+                          class="fw-bold">-1100</span>
                       </li>
                     </ul>
                   </div>
                 </div>
-
+                s
               </div>
             </div>
 
@@ -257,5 +278,83 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+  
+  const ctx1 = document.getElementById('chart1').getContext('2d');
+  new Chart(ctx1, {
+    type: 'bar',
+    data: {
+      labels: ['Before', 'After'],
+      datasets: [{
+        label: 'Monthly Bill (Rs)',
+        data: [1250, 1000],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(54, 162, 235, 0.6)'
+        ],
+        borderColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      indexAxis: 'y', 
+      responsive: true,
+      plugins: {
+        title: {
+        display: true,
+        text: 'Monthly Consumption (kWH)', 
+        font: { size: 12, weight: 'bold' }
+      },
+        legend: { display: false }
+      },
+      scales: {
+        x: { beginAtZero: true }
+      }
+    }
+  });
+
+  
+  const ctx2 = document.getElementById('chart2').getContext('2d');
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['Before', 'After'],
+      datasets: [{
+        label: 'Monthly Bill (Rs)',
+        data: [1250, 0],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(54, 162, 235, 0.6)'
+        ],
+        borderColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      indexAxis: 'y', 
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        title:{
+        display: true,
+        text: 'Monthly Bill', 
+        font: { size: 12, weight: 'bold' }
+        }
+      },
+      scales: {
+        x: { beginAtZero: true }
+      }
+    }
+  });
+</script>
+
   </body>
 </html>
