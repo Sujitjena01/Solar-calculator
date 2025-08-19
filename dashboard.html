@@ -11,28 +11,37 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img
-          src="assets/images/TPDDL_URJA_LOGO_white.webp"
-          alt="TPDDL_URJA_LOGO"
-          class="me-3" />
-      </div>
+  <div class="logo">
+    <img src="assets/images/TPDDL_URJA_LOGO_white.webp" alt="TPDDL_URJA_LOGO" class="me-3">
+  </div>
 
-      <div class="right-section">
-        <div class="user-info">
-          <p><span>Hello!</span> ANKIT RAI</p>
-          <p><span>CA No.</span>:816264579273</p>
-        </div>
-        <div class="icons">
-          <i class="fa-solid fa-user"></i>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
+  <div class="right-section">
+    <div class="user-info">
+      <p><strong>Hello!</strong> ANKIT RAI</p>
+      <p><strong>CA No.</strong>:816264579273</p>
+    </div>
+
+    <div class="icons">
+      <i class="fa-solid fa-user"></i>
+      <!-- Dropdown Trigger -->
+      <div class="dropdown">
+        <button class="dropdown-toggle" id="userDropdown" aria-expanded="false">
+          <!-- <i class="fa-solid fa-angle-down"></i> -->
+        </button>
+        <!-- Dropdown Menu -->
+        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
       </div>
-    </header>
+    </div>
+  </div>
+</header>
+
 
     <main class="main">
       <div class="left">
-        <div class="accordion" id="solarAccordion">
+        <div class="accordion" id="solarAccordion" >
           <div class>
             <div class="col-md-12">
               <div class="accordion-item mb-3">
@@ -41,32 +50,33 @@
                     class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne">
+                    data-bs-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne" role="tab">
                     Consumer Details
                     <div class="d-flex align-items-center gap-2 ms-2">
-                      <span class="status">● Active</span>
+                      <span class="status" role="status" aria-label="Connection status: Active">● Active</span>
                     </div>
                   </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show">
+                <div id="collapseOne" class="accordion-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" >
                   <div class="accordion-body">
                     <div class="consumer-details">
                       <div>
-                        <strong>Category</strong> <br> <span>Domestic</span>
+                        <strong>Category</strong> <span>Domestic</span>
                       </div>
                       <div>
-                        <strong>Load (KW)</strong> <br> <span>7</span>
+                        <strong>Load (KW)</strong> <span>7</span>
                       </div>
                       <div>
-                        <strong>Monthly Avg. Consumption</strong> <br>
+                        <strong>Monthly Avg. Consumption</strong> 
                         <span>1000</span>
                       </div>
                       <div>
-                        <strong>Monthly Avg. Bill</strong> <br>
+                        <strong>Monthly Avg. Bill</strong> 
                         <span>1250</span>
                       </div>
                       <div>
-                        <strong>Address</strong> <br>
+                        <strong>Address</strong> 
                         <span>Plot No. 101, badagada brit colony, BBSR-18</span>
                       </div>
                     </div>  
@@ -84,11 +94,13 @@
                     class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo">
+                    data-bs-target="#collapseTwo" aria-expanded="true"
+                    aria-controls="collapseTwo"
+                    role="tab">
                     Solar Details & Benefits
                   </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse show">
+                <div id="collapseTwo" class="accordion-collapse collapse show" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="accordion-body">
                     <ul class="list-group">
                       <li>
@@ -133,13 +145,15 @@
                     class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree">
+                    data-bs-target="#collapseThree" aria-expanded="true"
+                    aria-controls="collapseThree"
+                    role="tab">
                     Monthly Bill Saving
                   </button>
                 </h2>
                 <div
                   id="collapseThree"
-                  class="accordion-collapse collapse show">
+                  class="accordion-collapse collapse show" role="tabpanel" aria-labelledby="headingThree">
                   <div class="accordion-body">
                     <p>
                       <div class="row">
@@ -174,11 +188,13 @@
                     class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour">
+                    data-bs-target="#collapseFour" aria-expanded="true"
+                    aria-controls="collapseFour"
+                    role="tab">
                     Excess Solar Generation
                   </button>
                 </h2>
-                <div id="collapseFour" class="accordion-collapse collapse show">
+                <div id="collapseFour" class="accordion-collapse collapse show" role="tabpanel" aria-labelledby="headingFour">
                   <div class="accordion-body">
                     <ul class="list-group">
                      
@@ -209,11 +225,13 @@
                     class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive">
+                    data-bs-target="#collapseFive" aria-expanded="true"
+                    aria-controls="collapseFive"
+                    role="tab">
                     EMI Amount & Payback
                   </button>
                 </h2>
-                <div id="collapseFive" class="accordion-collapse collapse show">
+                <div id="collapseFive" class="accordion-collapse collapse show" role="tabpanel" aria-labelledby="headingFive">
                   <div class="accordion-body">
                     <ul class="list-group EMI">
                       <li>EMI (Before Subsidy) <span>2725</span></li>
@@ -368,6 +386,42 @@
     }
   });
 </script>
+<script>
+  // Ensure accordion headers are tabbable and can be activated with Enter/Space
+  document.querySelectorAll('.accordion-button').forEach(btn => {
+    btn.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleBtn = document.querySelector(".dropdown-toggle");
+  const dropdown = document.querySelector(".dropdown");
 
+  // Toggle on chevron click
+  toggleBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle("open");
+  });
+
+  // Close dropdown if clicking outside
+  document.addEventListener("click", function () {
+    dropdown.classList.remove("open");
+  });
+
+  // Close dropdown on Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      dropdown.classList.remove("open");
+      toggleBtn.focus(); // optional: return focus to button
+    }
+  });
+});
+
+</script>
   </body>
 </html>

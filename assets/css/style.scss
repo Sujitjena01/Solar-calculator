@@ -10,3 +10,49 @@ strong {
     font-family: $roboto-bold;
     font-weight: bold;
 }
+
+/* Generic focus style for all common interactive elements */
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible,
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible,
+[tabindex]:focus,
+[tabindex]:focus-visible,
+summary:focus,
+summary:focus-visible,
+details:focus,
+details:focus-visible {
+    outline: 3px solid #1060AA !important;
+    outline-offset: 2px;
+    border-radius: 4px;
+    /* optional */
+}
+
+/* Override Bootstrap components that suppress outlines */
+.btn:focus,
+.btn:focus-visible,
+.accordion-button:focus,
+.accordion-button:focus-visible,
+.nav-link:focus,
+.nav-link:focus-visible,
+.dropdown-item:focus,
+.dropdown-item:focus-visible,
+.page-link:focus,
+.page-link:focus-visible,
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus,
+.form-range:focus,
+.list-group-item-action:focus,
+.list-group-item-action:focus-visible {
+    box-shadow: none !important;
+    /* disable Bootstrap glow */
+    outline: 3px solid #1060AA !important;
+    outline-offset: 2px;
+}

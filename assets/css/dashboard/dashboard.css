@@ -48,6 +48,11 @@ header .logo {
 header .logo img {
   width: 170px;
 }
+@media (max-width: 767px) {
+  header .logo img {
+    width: 100px;
+  }
+}
 header .right-section {
   display: flex;
   align-items: center;
@@ -59,9 +64,19 @@ header .right-section .user-info p {
   margin: 0px;
   text-align: right;
 }
-header .right-section .user-info p span {
+@media (max-width: 767px) {
+  header .right-section .user-info p {
+    font-size: 10px;
+  }
+}
+header .right-section .user-info p strong {
   font-weight: 700;
   font-size: 12px;
+}
+@media (max-width: 767px) {
+  header .right-section .user-info p strong {
+    font-size: 10px;
+  }
 }
 header .right-section .icons {
   display: flex;
@@ -76,6 +91,43 @@ header .right-section .icons .fa-user {
   padding: 10px;
   border-radius: 50%;
 }
+header .right-section .icons .dropdown {
+  position: relative;
+}
+header .right-section .icons .dropdown .dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
+header .right-section .icons .dropdown .dropdown-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 120px;
+  display: none;
+  z-index: 10;
+}
+header .right-section .icons .dropdown .dropdown-menu li a {
+  display: block;
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+header .right-section .icons .dropdown .dropdown-menu li a:hover {
+  background: #f2f2f2;
+}
+header .right-section .icons .dropdown.open .dropdown-menu {
+  display: block;
+}
 
 .main {
   max-height: calc(100vh - 90px);
@@ -87,8 +139,21 @@ header .right-section .icons .fa-user {
   gap: 15px;
   padding: 0px 10px 0px 10px;
 }
+@media (max-width: 767px) {
+  .main {
+    display: block;
+    max-height: -moz-max-content;
+    max-height: max-content;
+  }
+}
 .main .left {
   max-height: calc(100vh - 90px);
+}
+@media (max-width: 767px) {
+  .main .left {
+    max-height: -moz-max-content;
+    max-height: max-content;
+  }
 }
 .main .left .accordion-item {
   box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.17);
@@ -135,6 +200,24 @@ header .right-section .icons .fa-user {
 .main .left .consumer-details {
   display: grid;
   grid-template-columns: auto auto auto auto 200px;
+}
+@media (max-width: 767px) {
+  .main .left .consumer-details {
+    display: block;
+  }
+}
+.main .left .consumer-details div {
+  display: grid;
+  align-content: start;
+}
+@media (max-width: 767px) {
+  .main .left .consumer-details div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main .left .consumer-details div:last-child span {
+    text-align: end;
+  }
 }
 .main .left .consumer-details strong {
   color: #545253;
