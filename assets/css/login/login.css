@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------- Fonts --------------------------*/
+/*------------------- Colors --------------------------*/
 /*------------------- Responsive --------------------------*/
 * {
   margin: 0;
@@ -29,6 +43,11 @@ a {
     grid-template-columns: auto;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-container {
+    grid-template-columns: 423px auto;
+  }
+}
 .main-container .left-panel {
   position: relative;
   flex: 0 0 30%;
@@ -47,6 +66,18 @@ a {
 @media (max-width: 767px) {
   .main-container .left-panel img {
     display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-container .left-panel img {
+    position: relative;
+    left: -250px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .main-container .left-panel img {
+    position: relative;
+    left: -150px;
   }
 }
 @media (max-width: 767px) {
@@ -148,6 +179,21 @@ a {
 }
 .main-container .right-panel .content .logo-text img {
   width: 377px;
+}
+@media (max-width: 767px) {
+  .main-container .right-panel .content .logo-text img {
+    width: 250px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-container .right-panel .content .logo-text img {
+    width: 310px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .main-container .right-panel .content .logo-text img {
+    width: 320px;
+  }
 }
 .main-container .right-panel .content .Validate {
   background-color: #1060AA;

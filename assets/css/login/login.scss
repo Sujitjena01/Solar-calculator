@@ -29,6 +29,10 @@ a {
         grid-template-columns: auto;
     }
 
+    @media #{$tablet_device} {
+        grid-template-columns: 423px auto;
+    }
+
     .left-panel {
         position: relative;
         flex: 0 0 30%;
@@ -45,6 +49,16 @@ a {
 
             @media #{$mobile_device} {
                 display: none;
+            }
+
+            @media #{$tablet_device} {
+                position: relative;
+                left: -250px;
+            }
+
+            @media #{$mid_device} {
+                position: relative;
+                left: -150px;
             }
         }
 
@@ -160,6 +174,18 @@ a {
 
                 img {
                     width: 377px;
+
+                    @media #{$mobile_device} {
+                        width: 250px;
+                    }
+
+                    @media #{$tablet_device} {
+                        width: 310px;
+                    }
+
+                    @media #{$mid_device} {
+                        width: 320px;
+                    }
                 }
             }
 
