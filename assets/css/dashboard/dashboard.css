@@ -245,7 +245,17 @@ header .right-section .icons .dropdown.open .dropdown-menu {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  color: #545253;
+  color: #312e2f;
+}
+.main .left .accordion-item .accordion-body .list-group li input {
+  width: 75px;
+  border: 1.5px solid #1060AA;
+  border-radius: 5px;
+  padding: 5px;
+  height: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: right;
 }
 .main .left .accordion-item .accordion-body .list-group li span {
   font-weight: normal;
@@ -434,7 +444,7 @@ header .right-section .icons .dropdown.open .dropdown-menu {
   margin-top: 7px;
 }
 .summary-box p {
-  color: #575656;
+  color: #3b3a3a;
   font-size: 12px;
   margin: 0px;
   font-weight: 500;
