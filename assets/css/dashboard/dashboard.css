@@ -248,14 +248,14 @@ header .right-section .icons .dropdown.open .dropdown-menu {
   color: #312e2f;
 }
 .main .left .accordion-item .accordion-body .list-group li input {
-  width: 75px;
+  width: 34px;
   border: 1.5px solid #1060AA;
   border-radius: 5px;
   padding: 5px;
   height: 20px;
   font-size: 13px;
   font-weight: 700;
-  text-align: right;
+  text-align: left;
 }
 .main .left .accordion-item .accordion-body .list-group li span {
   font-weight: normal;

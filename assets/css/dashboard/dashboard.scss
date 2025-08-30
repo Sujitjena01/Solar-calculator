@@ -184,16 +184,14 @@ header {
                         color: #312e2f;
 
                         input {
-                            width: 75px;
-                            border: 1.5px solid $primary-color;
+                            width: 34px;
+                            border: 1.5px solid #1060AA;
                             border-radius: 5px;
                             padding: 5px;
                             height: 20px;
                             font-size: 13px;
                             font-weight: 700;
-                            // background: $primary-color;
-                            text-align: right;
-                            // color: #fff;
+                            text-align: left;
                         }
 
                         span {
