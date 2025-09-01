@@ -37,7 +37,7 @@ a {
     .left-panel {
         position: relative;
         flex: 0 0 30%;
-        z-index: 3333;
+        // z-index: 3333;
 
         @media #{$mobile_device} {
             background: url('../../images/login/solar_panel_installation.png') no-repeat center center;
@@ -90,7 +90,7 @@ a {
                 transform: none;
                 box-shadow: 0px 0px 0px 7px #f5f5f5;
                 background-color: #10AA2D;
-                z-index: 2222222;
+                z-index: 111;
             }
 
             @media #{$tablet_device} {
@@ -103,7 +103,7 @@ a {
                 transform: none;
                 box-shadow: 0px 0px 0px 7px #f5f5f5;
                 background-color: #10AA2D;
-                z-index: 2222222;
+                z-index: 11;
             }
         }
 
@@ -166,7 +166,7 @@ a {
             justify-content: center;
             gap: 50px;
             position: relative;
-            z-index: 333333;
+            z-index: auto;
 
             &.guest-content {
                 align-content: start;
@@ -261,6 +261,8 @@ a {
                     list-style: none;
                     display: grid;
                     gap: 50px;
+                    margin: 0px;
+                    padding: 0px;
 
                     li {
                         button {
@@ -284,6 +286,16 @@ a {
                         }
                     }
                 }
+            }
+
+            .terms {
+                border: none;
+                text-align: center;
+                width: 100%;
+                background: transparent;
+                color: #1060AA;
+                font-weight: 600;
+                transition: 0.3s;
             }
 
             a:not(.back) {

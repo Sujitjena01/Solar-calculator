@@ -158,7 +158,7 @@
                   id="collapseThree"
                   class="accordion-collapse collapse show" role="tabpanel" aria-labelledby="headingThree">
                   <div class="accordion-body">
-                    <p>
+                  
                       <div class="row">
                         <div class="col-md-6">
                           <div class="bg-light p-3 text-center border rounded">
@@ -171,14 +171,17 @@
                           </div>
                         </div>
                       </div>
-
-                    </p>
-                    <p
-                      class="bg-success text-white p-2 rounded d-flex justify-content-between">
-                      <span>Monthly Bill Saving (B):</span>
-                      <span class="fw-bold">1250</span>
-                    </p>
-
+<hr>
+                    
+<ul class="list-group">
+  <li>Monthly Bill Saving (B):
+                      <span class="fw-bold">1250</span></li>
+                      
+                      <li>Payback Years Before Loan:
+                      <span class="fw-bold">0.6</span></li>
+                      <li>Total Saving (A+B+C):
+                      <span class="fw-bold">123445.6</span></li>
+</ul>
                   </div>
                 </div>
               </div>
@@ -313,6 +316,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/chart.js"></script>
+    <script src="assets/js/chartjs-plugin-datalabels.js"></script>
 
     <script>
   
@@ -339,6 +343,12 @@
       indexAxis: 'y', 
       responsive: true,
       plugins: {
+        datalabels: {
+          align: 'right',    // Right-aligns labels
+          // anchor: 'end',     // Anchor label at end of bar
+          color: 'black',
+          font: { weight: 'bold' }
+        },
         title: {
         display: true,
         text: 'Monthly Consumption (kWH)', 
@@ -349,7 +359,8 @@
       scales: {
         x: { beginAtZero: true }
       }
-    }
+    },
+    plugins: [ChartDataLabels], // Activate plugin for this chart
   });
 
   
@@ -376,17 +387,25 @@
       indexAxis: 'y', 
       responsive: true,
       plugins: {
+        datalabels: {
+          align: 'right',    // Right-aligns labels
+          // anchor: 'end',     // Anchor label at end of bar
+          color: 'black',
+          font: { weight: 'bold' }
+        },
         legend: { display: false },
         title:{
         display: true,
         text: 'Monthly Bill', 
         font: { size: 12, weight: 'bold' }
+    
         }
       },
       scales: {
         x: { beginAtZero: true }
       }
-    }
+    },
+    plugins: [ChartDataLabels], // Activate plugin for this chart
   });
 </script>
 
