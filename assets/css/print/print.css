@@ -1,0 +1,228 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------- Fonts --------------------------*/
+/*------------------- Colors --------------------------*/
+/*------------------- Responsive --------------------------*/
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------- Fonts --------------------------*/
+/*------------------- Colors --------------------------*/
+/*------------------- Responsive --------------------------*/
+body {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+strong {
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: bold;
+}
+
+/* Generic focus style for all common interactive elements */
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible,
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible,
+[tabindex]:focus,
+[tabindex]:focus-visible,
+summary:focus,
+summary:focus-visible,
+details:focus,
+details:focus-visible {
+  outline: 3px solid #1060AA !important;
+  outline-offset: 2px;
+  border-radius: 4px;
+  /* optional */
+}
+
+/* Override Bootstrap components that suppress outlines */
+.btn:focus,
+.btn:focus-visible,
+.accordion-button:focus,
+.accordion-button:focus-visible,
+.nav-link:focus,
+.nav-link:focus-visible,
+.dropdown-item:focus,
+.dropdown-item:focus-visible,
+.page-link:focus,
+.page-link:focus-visible,
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus,
+.form-range:focus,
+.list-group-item-action:focus,
+.list-group-item-action:focus-visible {
+  box-shadow: none !important;
+  /* disable Bootstrap glow */
+  outline: 3px solid #1060AA !important;
+  outline-offset: 2px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@page {
+  size: A4;
+  margin: 1cm;
+}
+@media print {
+  #downloadBtn {
+    display: none;
+  }
+}
+.no-print {
+  display: block;
+  /* visible on screen */
+}
+
+.no-print.pdf {
+  display: none;
+  /* hidden in PDF */
+}
+
+#content {
+  width: 210mm;
+  min-height: 294mm;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.print .head {
+  display: grid;
+  grid-template-columns: 593px auto;
+  gap: 20px;
+}
+.print .head .left .left-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.print .head .left .left-top img {
+  width: 100px;
+}
+.print .head .left .left-top h1 {
+  font-weight: 700;
+  font-size: 26px;
+}
+.print .head .left .left-top h1 span {
+  color: rgb(1, 131, 64);
+}
+.print .head .left h2 {
+  background: linear-gradient(90deg, rgb(63, 88, 168) 0%, rgb(54, 142, 68) 100%);
+  color: #fff;
+  padding: 6px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 0px 20px 0px 0px;
+}
+.print .head .left .head-contact {
+  display: grid;
+  grid-template-columns: 99px 178px 114px auto;
+  gap: 10px;
+  align-items: center;
+}
+.print .head .left .head-contact .contact-card {
+  display: flex;
+  gap: 5px;
+  border-right: 2px solid #ddd;
+  padding-right: 10px;
+  align-items: center;
+}
+.print .head .left .head-contact .contact-card:last-child {
+  border: none;
+}
+.print .head .left .head-contact .contact-card .icon i {
+  font-size: 20px;
+  color: #2364ad;
+}
+.print .head .left .head-contact .contact-card .icon img {
+  width: 40px;
+}
+.print .head .left .head-contact .contact-card .text p {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+.print .head .left .head-contact .contact-card .text p span {
+  font-size: 10px;
+}
+.print .head .right img {
+  width: 100%;
+}
+.print .body .solar-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.print .body .solar-table tr:first-child {
+  background-color: #2364ad;
+}
+.print .body .solar-table tr:first-child th {
+  color: #fff;
+  letter-spacing: 1.5px;
+  border: 1px solid #2364ad;
+  font-size: 17px;
+  padding: 2px;
+}
+.print .body .solar-table caption {
+  caption-side: top;
+  font-size: 1.4rem;
+  font-weight: normal;
+  padding: 10px;
+  color: #333;
+}
+.print .body .solar-table th,
+.print .body .solar-table td {
+  border: 1px solid #bdbdbd;
+  padding: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+.print .body .solar-table th {
+  color: #141414;
+}
+.print .body .solar-table .section-heading {
+  background: linear-gradient(180deg, rgb(63, 88, 168) 0%, rgb(54, 142, 68) 100%);
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+}
+.print .footer p {
+  margin: 0px;
+  background: #3e5e9c;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  font-size: 12px;
+}/*# sourceMappingURL=print.css.map */

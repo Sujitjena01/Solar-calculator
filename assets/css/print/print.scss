@@ -1,0 +1,187 @@
+@import '../../css/variables/variables.scss';
+@import '../../css/style.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@page {
+    size: A4;
+    margin: 1cm;
+}
+
+@media print {
+    #downloadBtn {
+        display: none;
+    }
+}
+
+.no-print {
+    display: block;
+    /* visible on screen */
+}
+
+.no-print.pdf {
+    display: none;
+    /* hidden in PDF */
+}
+
+#content {
+    width: 210mm;
+    min-height: 294mm;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.print {
+    .head {
+        display: grid;
+        grid-template-columns: 593px auto;
+        gap: 20px;
+
+        .left {
+            .left-top {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    width: 100px;
+                }
+
+                h1 {
+                    font-weight: 700;
+                    font-size: 26px;
+
+                    span {
+                        color: rgb(1 131 64);
+                    }
+                }
+            }
+
+            h2 {
+                background: linear-gradient(90deg, rgba(63, 88, 168, 1) 0%, rgba(54, 142, 68, 1) 100%);
+                color: #fff;
+                padding: 6px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 16px;
+                text-align: center;
+                border-radius: 0px 20px 0px 0px;
+            }
+
+            .head-contact {
+                display: grid;
+                grid-template-columns: 99px 178px 114px auto;
+                gap: 10px;
+                align-items: center;
+
+                .contact-card {
+                    display: flex;
+                    gap: 5px;
+                    border-right: 2px solid #ddd;
+                    padding-right: 10px;
+                    align-items: center;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    .icon {
+                        i {
+                            font-size: 20px;
+                            color: #2364ad;
+                        }
+
+                        img {
+                            width: 40px;
+                        }
+                    }
+
+                    .text {
+                        p {
+                            margin-bottom: 0px;
+                            font-size: 12px;
+
+                            span {
+                                font-size: 10px;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+        }
+
+        .right {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .body {
+        .solar-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+            tr {
+                &:first-child {
+                    background-color: #2364ad;
+
+                    th {
+                        color: #fff;
+                        letter-spacing: 1.5px;
+                        border: 1px solid #2364ad;
+                        font-size: 17px;
+                        padding: 2px;
+                    }
+                }
+            }
+
+            caption {
+                caption-side: top;
+                font-size: 1.4rem;
+                font-weight: normal;
+                padding: 10px;
+                color: #333;
+            }
+
+            th,
+            td {
+                border: 1px solid #bdbdbd;
+                padding: 5px;
+                text-align: center;
+                font-size: 12px;
+            }
+
+            th {
+                color: #141414;
+            }
+
+
+            .section-heading {
+                background: linear-gradient(180deg, rgba(63, 88, 168, 1) 0%, rgba(54, 142, 68, 1) 100%);
+                color: #fff;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+    }
+
+    .footer {
+        p {
+            margin: 0px;
+            background: #3e5e9c;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            font-size: 12px;
+        }
+    }
+}
