@@ -68,4 +68,17 @@ details:focus-visible {
   /* disable Bootstrap glow */
   outline: 3px solid #1060AA !important;
   outline-offset: 2px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  border: 1.5px solid #1060AA !important;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.17), 0 0 0 1000px #fff inset !important;
+  color: #1060AA !important;
+  font-weight: 700 !important;
+  -webkit-text-fill-color: #1060AA !important;
+  -webkit-transition: background-color 99999s ease-in-out 0s;
+  transition: background-color 99999s ease-in-out 0s;
 }/*# sourceMappingURL=style.css.map */
