@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar Calculator - Login</title>
+    <link rel="stylesheet" href="assets/css/login/login.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="page-login">
+    <div class="main-container">
+      <div class="left-panel" aria-hidden="true">
+        <img src="assets/images/login/Left_Solar.webp" alt />
+      </div>
+      <div class="right-panel">
+        <main class="content" role="main">
+          <div class="logo-text">
+            <a href="/" aria-label="Go to Homepage">
+              <img
+                src="assets/images/TPDDL_URJA_LOGO.webp"
+                alt="TATA URJA Logo"
+              />
+            </a>
+          </div>
+
+          <nav aria-label="Login options">
+            <ul>
+              <li>
+                <button id="existingConsumerBtn" class="btn" disabled>
+                  Existing Consumer
+                </button>
+              </li>
+              <li class="d-none">
+                <button>Guest User</button>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            class="terms"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            <i class="fa-solid fa-circle-info"></i> Terms and Conditions
+          </button>
+        </main>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  Terms & Conditions
+                </h5>
+              </div>
+              <div class="modal-body">
+                <ol>
+                  <li>
+                    No CFA will be provided to non-residential segments of
+                    consumers (including government segment, commercial and
+                    industrial segment etc.).
+                  </li>
+                  <li>
+                    The GHS/RWA connection eligible under the scheme shall be
+                    dedicated only for common facilities and should not be
+                    utilized for providing electricity supply to residential
+                    consumers within the GHS/RWA.
+                  </li>
+                  <li>
+                    The solar plant should meet the technical specification.
+                    (Eg. Use of non-DCR modules in any form in the installation
+                    shall make the installation ineligible for Central Financial
+                    Assistance.)
+                  </li>
+                  <li>
+                    Pre-existing RTS – (1) Increased installation size shall be
+                    eligible for additional CFA under the current scheme only
+                    for the balance capacity up to 3 kW of overall RTS plant
+                    size. (Eg. Any customer with 1 KW Solar plant, increasing
+                    plant size to 3 KW shall be eligible for CFA for difference
+                    2 KW only and thereof as per applicable scheme.)
+                    <br />
+                    (2) Already installed rooftop solar is shifted/relocated to
+                    a new location, such a system shall not be eligible for CFA
+                    under the scheme.
+                  </li>
+                  <li>
+                    Registered consumer of DISCOM getting Solar Plant installed
+                    will only be eligible for CFA.
+                  </li>
+                  <li>
+                    Consumer should have an active bank account for availing
+                    CFA.
+                  </li>
+                  <li>
+                    The Solar Plant request has to be processed and registered
+                    through MNRE National Portal only.
+                    <a href="https://pmsuryaghar.gov.in/#/"
+                      >https://pmsuryaghar.gov.in/#/</a
+                    >
+                  </li>
+                  <li>
+                    Consumer apply for Govt Base Incentive (GBI) on this link-
+                    <a href="https://pmsuryaghar.gov.in/#/"
+                      >https://pmsuryaghar.gov.in/#/</a
+                    >
+                  </li>
+                  <li>
+                    1kW of solar plant installation requires 10 sqm (approx.
+                    100sq feet) of area.
+                  </li>
+                </ol>
+              </div>
+              <div class="modal-footer">
+                <div
+                  style="flex: 1; display: flex; align-items: center; gap: 8px"
+                >
+                  <input type="checkbox" id="readTermsCheckbox" />
+                  <label for="readTermsCheckbox"
+                    >I have read and agree to the Terms & Conditions</label
+                  >
+                </div>
+
+                <button
+                  id="agreeBtn"
+                  type="button"
+                  class="btn btn-primary"
+                  disabled
+                >
+                  Agree
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Initial State
+      $("#existingConsumerBtn").prop("disabled", true);
+      $("#agreeBtn").prop("disabled", true);
+
+      // Enable the agree button only if checkbox is checked
+      $("#readTermsCheckbox").on("change", function () {
+        $("#agreeBtn").prop("disabled", !this.checked);
+      });
+
+      // On Agree: enable main button and close modal
+      $("#agreeBtn").on("click", function () {
+        $("#existingConsumerBtn").prop("disabled", false);
+        $("#staticBackdrop").modal("hide");
+        // Optionally, reset modal for future use:
+        $("#readTermsCheckbox").prop("checked", false);
+        $("#agreeBtn").prop("disabled", true);
+      });
+
+      // Optional: Reset modal when it's closed without agreeing
+      $("#staticBackdrop").on("hidden.bs.modal", function () {
+        $("#readTermsCheckbox").prop("checked", false);
+        $("#agreeBtn").prop("disabled", true);
+      });
+    });
+  </script>
+</html>

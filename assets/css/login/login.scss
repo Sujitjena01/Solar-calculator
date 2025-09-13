@@ -1,0 +1,375 @@
+@import '../../css/variables/variables.scss';
+@import '../../css/style.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+a {
+    color: $primary-color;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 450px auto;
+    height: 100vh;
+    background-image: url('../../images/solar-bg.webp');
+    background-size: cover;
+    overflow: hidden;
+
+    @media #{$mobile_device} {
+        grid-template-rows: 100px auto;
+        grid-template-columns: auto;
+    }
+
+    @media #{$tablet_device} {
+        grid-template-rows: 100px auto;
+        grid-template-columns: auto;
+    }
+
+    .left-panel {
+        position: relative;
+        flex: 0 0 30%;
+        // z-index: 3333;
+
+        @media #{$mobile_device} {
+            background: url('../../images/login/solar_panel_installation.png') no-repeat center center;
+            clip-path: none;
+            background-size: cover;
+        }
+
+        @media #{$tablet_device} {
+            background: url('../../images/login/solar_panel_installation.png') no-repeat center center;
+            clip-path: none;
+            background-size: cover;
+        }
+
+        @media screen and (min-width: 992px) and (min-height: 1366px) {
+            background-image: url(../../images/login/Left_Solar.webp);
+            background-position: center right;
+            background-size: cover;
+        }
+
+        @media #{$mid_device} {
+            background-image: url(../../images/login/Left_Solar.webp);
+            background-position: center right;
+            background-size: cover;
+        }
+
+        img {
+            height: 100vh;
+
+            @media #{$mobile_device} {
+                display: none;
+            }
+
+            @media #{$tablet_device} {
+                display: none;
+            }
+
+            @media #{$mid_device} {
+                display: none;
+            }
+        }
+
+        &::before {
+            @media #{$mobile_device} {
+                content: "";
+                position: absolute;
+                top: 100px;
+                width: 100%;
+                height: 7px;
+                right: 0px;
+                transform: none;
+                box-shadow: 0px 0px 0px 7px #f5f5f5;
+                background-color: #10AA2D;
+                z-index: 111;
+            }
+
+            @media #{$tablet_device} {
+                content: "";
+                position: absolute;
+                top: 100px;
+                width: 100%;
+                height: 7px;
+                right: 0px;
+                transform: none;
+                box-shadow: 0px 0px 0px 7px #f5f5f5;
+                background-color: #10AA2D;
+                z-index: 11;
+            }
+        }
+
+        &::after {
+            @media #{$mobile_device} {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: hsla(209, 83%, 36%, 0.785);
+                z-index: 1;
+            }
+
+            @media #{$tablet_device} {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: hsla(209, 83%, 36%, 0.785);
+                z-index: 1;
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            right: -5px;
+            width: 5px;
+            height: 100%;
+            background-color: green;
+        }
+    }
+
+    .right-panel {
+        // height: 100vh;
+        overflow-y: auto;
+
+        .solar-panel {
+            position: absolute;
+            top: 50%;
+            left: 188px;
+            transform: translateY(-50%);
+            z-index: 11;
+            width: 424px;
+
+            @media #{$mobile_device} {
+                display: none;
+            }
+        }
+
+        .content {
+            height: 100%;
+            display: grid;
+            align-content: center;
+            transform-origin: center;
+            justify-content: center;
+            gap: 50px;
+            position: relative;
+            z-index: auto;
+
+            &.guest-content {
+                align-content: start;
+                height: max-content;
+                padding: 20px 0px;
+            }
+
+            @media #{$mobile_device} {
+                padding: 30px;
+                align-content: baseline;
+            }
+
+            .form-floating {
+
+                .form-control,
+                .form-select {
+                    border: 1.5px solid #1060AA;
+                    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.17);
+                    color: $primary-color;
+                    font-weight: 700;
+                }
+
+                label {
+                    color: $primary-color;
+                }
+
+                span {
+                    font-size: small;
+                    color: $primary-color;
+                }
+            }
+
+            .back {
+                text-align: center;
+                text-decoration: none;
+                padding: 0px;
+                font-weight: 700;
+                color: rgb(35 100 173);
+            }
+
+
+
+            .logo-text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    padding: 0px !important;
+                    border: none !important;
+                    background: transparent !important;
+                    box-shadow: unset !important;
+                }
+
+                img {
+                    width: 377px;
+
+                    @media #{$mobile_device} {
+                        width: 250px;
+                    }
+
+                    @media #{$tablet_device} {
+                        width: 310px;
+                    }
+
+                    @media #{$mid_device} {
+                        width: 320px;
+                    }
+                }
+            }
+
+
+
+            .Validate {
+                background-color: $primary-color !important;
+                color: #fff !important;
+                font-weight: normal !important;
+                text-align: center;
+                padding: 1rem 0.75rem;
+                border-radius: 5px;
+                border: none;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: $secondary-color !important;
+                    color: white;
+                }
+            }
+
+            nav {
+                ul {
+                    list-style: none;
+                    display: grid;
+                    gap: 50px;
+                    margin: 0px;
+                    padding: 0px;
+
+                    li {
+                        button {
+                            background-color: #fff !important;
+                            color: $primary-color !important;
+                            font-weight: normal !important;
+                            text-align: center;
+                            padding: 1.5rem 0.75rem;
+                            border-radius: 5px;
+                            border: 2px solid $primary-color;
+                            transition: 0.3s;
+                            width: 100%;
+                            font-size: 17px;
+                            cursor: pointer;
+                            box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.17);
+
+                            &:hover {
+                                background-color: $primary-color !important;
+                                color: white !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .terms {
+                border: none;
+                text-align: center;
+                width: 100%;
+                background: transparent;
+                color: #1060AA;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+
+            a:not(.back) {
+                display: block;
+                padding: 30px;
+                border-radius: 10px;
+                border: 1px solid #1060AA;
+                font-size: 17px;
+                cursor: pointer;
+                background-color: white;
+                box-shadow: 2px 2px 0px 0px rgba(43, 40, 40, 0.18);
+                text-align: center;
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: #1060AA;
+                    color: white;
+                }
+
+                &.enterCAnum {
+                    cursor: text;
+
+                    &:hover {
+                        background-color: white;
+                        color: inherit;
+                    }
+                }
+
+                &.Validate {
+                    background-color: #1060AA;
+                    color: white;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: #0d4c86;
+                        color: white;
+                    }
+                }
+            }
+
+            &.content_validate {
+                gap: 25px;
+
+                a,
+                input {
+                    padding: 18px;
+                }
+
+                .back {
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 0px;
+                    font-weight: 700;
+                }
+            }
+
+            &.content_calculate {
+                gap: 18px;
+
+                button {
+                    border: none;
+                    text-align: center;
+                    width: 100%;
+                    background: transparent;
+                    color: $primary-color;
+                    font-weight: 600;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}
